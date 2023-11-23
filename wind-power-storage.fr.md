@@ -1,51 +1,49 @@
 # Power Storage for Wind Energy
 ```package
 fwd-edu-breakout=github:climate-action-kits/pxt-fwd-edu/fwd-breakout
-=github:climate-action-kits/pxt-fwd-edu
+Dial=github:climate-action-kits/pxt-fwd-edu
 ```
 
 ## Step 1 @showdialog
-Welcome to Power Storage for Wind Energy Coding Tutorial.
+Bienvenue dans le tutoriel de codage pour Stockage d’énergie pour l’énergie éolienne.
 ![built project](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/project-windturbine-200.png)
 
 ## Step 2 @showdialog
-In this coding tutorial, we will use the LED lights to indicate the level of 'charge' the wind turbine's battery has based on how fast the wind turbine is spinning. The faster it's spinning, the higher the charge. The wind turbine should move in the same direction as the dial is being turned, and use the button function to stop. When the wind turbine is not moving, and therefore not generating power, the battery is considered 'dead' and should not display any lights.
+Dans ce tutoriel de codage, nous utiliserons les lumières DEL pour indiquer le niveau de « charge » de la batterie de l'éolienne en fonction de la vitesse de rotation de l'éolienne. Plus elle tourne vite, plus la charge est élevée. L'éolienne doit tourner dans le même sens que le cadran, et utiliser le bouton pour s'arrêter. Lorsque l'éolienne ne bouge pas et ne produit donc pas d'électricité, la batterie est considérée comme "à plat" et ne doit pas s'allumer.
 
 ## Step 3 @showdialog
-Turn on the Climate Action Kit board.
+Allume la trousse d’action climatique.
 ![breakout board](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/breakout-turn-on.png)
 
 ## Step 4
-Click three dots besides the ``|Download|`` button, and click on _Connect Device_.
-Next, follow the steps to pair your micro:bit.
+Clique sur les trois points à côté du bouton ``|Download|``et puis, clique sur Connecter l’appareil. Ensuite, suis les étapes pour coupler ton micro:bit.
 ![pair gif](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/pairmicrobit-280x203.gif)
 
 ## Step 5
-Next, click the ``|Download|`` button to download the blank project to start-up the simulators.
+Ensuite, clique sur le bouton ``|Download|`` pour télécharger le projet vierge afin de  démarrer les simulateurs.
 
 ## Step 6 @showdialog
-This is how the simulators should look after a successful download. You can see the Dial,
-the Touch and the Servo Motors along side the Pump.
+Voici à quoi devraient ressembler les simulateurs après un téléchargement réussi.  Tu peux voir le cadran, le capteur tactile et les servomoteurs à côté de la pompe.
 ![initial-dowload-gif](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/initial-download.gif)
 
 ## Step 7
-Look below the @boardname@ simulator to see the Climate Action Board and the connected sensors. Try turning the Dial on your project, the virtual  simulator will react to it.
+Regarde sous le simulateur micro:bit pour voir la carte de la trousse d’action climatique et les capteurs connectés.  Essaie de tourner le cadran de ton projet, le simulateur virtuel y réagira.
 ![wind](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/simulator-6-Dial.gif)
 
 ## Step 8
-Click ``||fwdSensors:Sensors||`` drag and drop
-``||fwdSensors:on dial1 turned difference||`` block in workspace.
+Clique sur ``||fwdSensors:Sensors||`` nsuite, fait glisser et dépose le bloc
+``||fwdSensors:on dial1 turned difference||`` dans l’espace de travail.
 ```blocks
 fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (difference) {
     })
 ```
 
 ## Step 9
-Right click ``||fwdSensors:on dial1 turned difference||`` block and duplicate. _Note: New block will be grey._
+Clique droit sur le bloc ``||fwdSensors:on dial1 turned difference||`` et duplique-le. _Remarque : Le nouveau bloc sera gris._
 ![greyed out example](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/dial-greyed-out-demo.png)
 
 ## Step 10
-Change the direction arrow of the greyed out ``||fwdSensors:on dial1 turned difference||`` block. _Note: Greyed out block will turn green._
+Modifie la flèche de direction du bloc grisé ``||fwdSensors:on dial1 turned difference||``. _Remarque : le bloc en gris devient vert._
 ![dial direction](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/dial-direction-switch.gif)
 ```blocks
 fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (difference) {
@@ -55,8 +53,8 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 
 ## Step 11
-Click ``||fwdSensors:Sensors||`` drag and drop
-``||fwdSensors:on touch down||`` block in workspace.
+Clique sur ``||fwdSensors:Sensors||``.Ensuite, fait glisser et dépose le bloc
+``||fwdSensors:on touch down||`` dans l’espace de travail.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     })
@@ -67,12 +65,12 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 
 ## Step 12
-Click ``||Variables:Variables||`` and make a ``||Variables:Variable||``
+Clique sur ``||Variables:Variables||`` and make a ``||Variables:Variable||``
 ``||Variables:turbinespeed||``.
 
 ## Step 13
-Click ``||Variables:Variables||`` drag and drop ``||Variables:set turbinespeed to 0||``
-block inside ``||Basic:on start||`` block.
+Clique sur ``||Variables:Variables||``  Ensuite, fait glisser et imbrique le bloc ``||Variables:set turbinespeed to 0||``
+à l’intérieur du bloc``||Basic:on start||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 })
@@ -84,8 +82,8 @@ turbinespeed = 0
 ```
 
 ## Step 14
-Click ``||Variables:Variables||`` drag and drop ``||Variables:set turbinespeed to 0||``
-block inside ``||fwdSensors:on dial1 turned difference||`` block.
+Clique sur ``||Variables:Variables||``. Ensuite, fait glisser et imbrique le bloc ``||Variables:set turbinespeed to 0||``
+à l’intérieur du bloc ``||fwdSensors:on dial1 turned difference||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 })
@@ -99,8 +97,7 @@ turbinespeed = 0
 ```
 
 ## Step 15
-Click ``||Variables:Variables||`` drag and drop ``||Variables:set turbinespeed to 0||``
-block inside the other ``||fwdSensors:on dial1 turned difference||`` block.
+Clique sur ``||Variables:Variables||`` . Ensuite, fait glisser et imbrique le bloc ``||Variables:set turbinespeed to 0||`` à l’intérieur de l’autre bloc ``||fwdSensors:on dial1 turned difference||
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 })
@@ -115,10 +112,9 @@ turbinespeed = 0
 ```
 
 ## Step 16
-Click ``||fwdMotors:Motors||`` drag and drop
-``||fwdMotors:set leftServo to 50 %||`` under
-``||Variables:set turbinespeed to 0||``
-block. Change ``||fwdMotors:leftServo||`` to ``||fwdMotors:middleServo||``.
+Clique sur ``||fwdMotors:Motors||``. Ensuite, fait glisser et dépose le bloc
+``||fwdMotors:set leftServo to 50 %||`` sous le bloc
+``||Variables:set turbinespeed to 0||``. Après, change ``||fwdMotors:leftServo||`` au ``||fwdMotors:middleServo||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     })
@@ -134,9 +130,7 @@ turbinespeed = 0
 ```
 
 ## Step 17
-Right click ``||fwdMotors:set middleServo to 50 %||`` block and duplicate it.
-Drag and drop under the other ``||Variables:set turbinespeed to 0||``
-block.
+Clique droite sur le bloc ``||fwdMotors:set middleServo to 50 %||`` et duplique-le. Ensuite, fait-le glisser et dépose-le sous l’autre bloc ``||Variables:set turbinespeed to 0||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     fwdMotors.middleServo.fwdSetSpeed(0)
@@ -154,10 +148,9 @@ turbinespeed = 0
 ```
 
 ## Step 18
-Click ``||fwdMotors:Motors||`` drag and drop
-``||fwdMotors:set leftServo to 50 %||`` under
-``||fwdSensors:on touch down||`` block.
-Change ``||fwdMotors:leftServo||`` to ``||fwdMotors:middleServo||``. Change ``||fwdMotors:50%||`` to ``||fwdMotors:0%||``
+Clique sur ``||fwdMotors:Motors||`` . Ensuite, fait glisser et dépose le bloc ``||fwdMotors:set leftServo to 50 %||`` sous le bloc
+``||fwdSensors:on touch down||``.
+Change ``||fwdMotors:leftServo||`` au ``||fwdMotors:middleServo||``. Change ``||fwdMotors:50%||`` en ``||fwdMotors:0%||``
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     fwdMotors.middleServo.fwdSetSpeed(0)
@@ -174,10 +167,9 @@ turbinespeed = 0
 ```
 
 ## Step 19
-Click ``||fwdSensors:Sensors||``.
-Drag ``||fwdSensors:dial1 absolute position||``
-oval block close to ``||Variables:set turbinespeed to 0||`` to
-replace ``||Variables:0||`` of ``||Variables:set turbinespeed to 0||`` block.
+Clique sur ``||fwdSensors:Sensors||``.
+. Ensuite, fait glisser le bloc avec une forme ovale ``||fwdSensors:dial1 absolute position||``
+près du bloc ``||Variables:set turbinespeed to 0||`` pour remplacer le ``||Variables:0||`` dans bloque ``||Variables:set turbinespeed to 0||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -195,10 +187,9 @@ turbinespeed = 0
 ```
 
 ## Step 20
-Click ``||fwdSensors:Sensors||``.
-Drag ``||fwdSensors:dial1 absolute position||``
-oval block close to the other ``||Variables:set turbinespeed to 0||`` to
-replace ``||Variables:0||`` of ``||Variables:set turbinespeed to 0||`` block.
+Clique sur ``||fwdSensors:Sensors||``.
+. Ensuite, fait glisser le bloc avec une forme ovale ``||fwdSensors:dial1 absolute position||``
+près de l’autre bloc ``||Variables:set turbinespeed to 0||`` pour remplacer le ``||Variables:0||`` dans bloque ``||Variables:set turbinespeed to 0||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -216,10 +207,8 @@ turbinespeed = 0
 ```
 
 ## Step 21
-Click ``||Variables:Variables||``.
-Drag ``||Variables:turbinespeed||``
-oval block close to ``||fwdMotors:set middleServo to 50 %||`` to
-replace ``||fwdMotors:50||`` of ``||fwdMotors:set middleServo to 50 %||`` block.
+Clique sur ``||Variables:Variables||``. Ensuite, fait glisser le bloc avec une forme ovale ``||Variables:turbinespeed||``
+près du bloc ``||fwdMotors:set middleServo to 50 %||`` pour remplacer le ``||fwdMotors:50||`` dans le bloc ``||fwdMotors:set middleServo to 50 %||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -237,10 +226,8 @@ turbinespeed = 0
 ```
 
 ## Step 22
-Click ``||Variables:Variables||``.
-Drag ``||Variables:turbinespeed||``
-oval block close to the other ``||fwdMotors:set middleServo to 50 %||`` to
-replace ``||fwdMotors:50||`` of ``||fwdMotors:set middleServo to 50 %||`` block.
+Clique sur ``||Variables:Variables||``. Ensuite, fait glisser le bloc avec une forme ovale ``||Variables:turbinespeed||``
+près de l’autre bloc ``||fwdMotors:set middleServo to 50 %||`` pour remplacer le ``||fwdMotors:50||`` dans le bloc ``||fwdMotors:set middleServo to 50 %||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -258,8 +245,7 @@ turbinespeed = 0
 ```
 
 ## Step 23
-Click ``||Logic:Logic||`` drag and drop ``||Logic:if true then else||`` block
-under ``||fwdMotors:set middleServo||`` ``||Variables:turbinespeed||`` block.
+Clique sur ``||Logic:Logic||``. Ensuite, fait glisser et dépose le bloc ``||Logic:if true then else||`` sous le bloc ``||fwdMotors:set middleServo||`` ``||Variables:turbinespeed||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -281,8 +267,7 @@ turbinespeed = 0
 ```
 
 ## Step 24
-Click ``||Logic:Logic||`` drag and drop ``||Logic:if true then else||`` block
-under the other ``||fwdMotors:set middleServo||`` ``||Variables:turbinespeed||`` block.
+Clique sur ``||Logic:Logic||``. Ensuite, fait glisser et dépose le bloc ``||Logic:if true then else||`` sous l’autre bloc ``||fwdMotors:set middleServo||`` ``||Variables:turbinespeed||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -308,9 +293,7 @@ turbinespeed = 0
 ```
 
 ## Step 25
-Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors:set all ledRing LEDs to||`` block
-under ``||Logic:If true then else||`` block. Change the ``||fwdSensors:LED||``
-colour to ``||fwdSensors:Green||``.
+Clique sur ``||fwdSensors:Sensors||``. Ensuite, fait glisser et dépose le bloc ``||fwdSensors:set all ledRing LEDs to||`` sous le bloc ``||Logic:If true then else||`` Change le ``||fwdSensors:LED||`` en couleur ``||fwdSensors:Green||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -337,9 +320,7 @@ turbinespeed = 0
 ```
 
 ## Step 26
-Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors:set all ledRing LEDs to||`` block
-under the other ``||Logic:If true then else||`` block.  Change the ``||fwdSensors:LED||``
-colour to ``||fwdSensors:Green||``.
+Clique sur ``||fwdSensors:Sensors||`` . Ensuite, fait glisser et dépose le bloc ``||fwdSensors:set all ledRing LEDs to||`` sous l’autre bloc ``||Logic:If true then else||``. Change le ``||fwdSensors:LED||`` en couleur ``||fwdSensors:Green||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -367,9 +348,7 @@ turbinespeed = 0
 ```
 
 ## Step 27
-Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors:set all ledRing LEDs to||`` block
-under both ``||Logic:else||`` condition.  Change the ``||fwdSensors:LED||``
-colour to yellow.
+Clique sur ``||fwdSensors:Sensors||``. Ensuite, fait glisser et dépose le bloc ``||fwdSensors:set all ledRing LEDs to||`` sous les deux conditions ``||Logic:else||`` condition. Change la couleur du  ``||fwdSensors:LED||`` en jaune.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -399,9 +378,8 @@ turbinespeed = 0
 ```
 
 ## Step 28
-Click ``||Logic:Logic||`` drag and drop ``||Logic:Comparison <||`` ``||Logic:0 < 0||``
- block to replace the ``||Logic:true||`` condition in 
- both ``||Logic:if true then else||`` blocks.
+Clique sur ``||Logic:Logic||``. Ensuite, fait glisser et imbrique le bloc ``||Logic:Comparison <||`` ``||Logic:0 < 0||``
+pour remplacer la condition ``||Logic:true||`` dans le deux blocs ``||Logic:if true then else||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -431,9 +409,8 @@ turbinespeed = 0
 ```
 
 ## Step 29
-Click ``||Variables:Variables||`` drag and drop ``||Variables:turbinespeed||``
-oval block to replace the ``||Logic:0||`` on the left side in both
-``||Logic:Comparison||`` blocks.
+Clique sur ``||Variables:Variables||``. Ensuite, fait glisser et dépose le bloc avec une forme ovale ``||Variables:turbinespeed||``
+pour remplacer le ``||Logic:0||`` dans le côté gauche des deux blocs ``||Logic:Comparison||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -463,8 +440,8 @@ turbinespeed = 0
 ```
 
 ## Step 30
-Click ``||Logic:<||`` change it to ``||Logic:>||`` on
-``||fwdSensors:on dial1 turned by CW||`` block. Change the ``||Logic:0||`` to
+Clique sur ``||Logic:<||``. Ensuite, modifie-le au ``||Logic:>||`` dans le bloc
+``||fwdSensors:on dial1 turned by CW||``. Modifie le ``||Logic:0||`` en
 ``||Logic:80||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
@@ -495,9 +472,9 @@ turbinespeed = 0
 ```
 
 ## Step 31
-Change the ``||Logic:0||`` to
-``||Logic: -80||`` on the ``||Logic:<||`` block under
-``||fwdSensors:on dial1 turned by CCW||`` block.
+Change le ``||Logic:0||`` à
+``||Logic: -80||`` dans le bloc ``||Logic:<||`` qui se trouve sous le bloc
+``||fwdSensors:on dial1 turned by CCW||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -527,9 +504,8 @@ turbinespeed = 0
 ```
 
 ## Step 32
-Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors:set all ledRing to||`` block
-inside ``||fwdSensors:on touch down||`` block under ``||fwdMotors:set middleServo to 0%||`` block.
-Change the ``||fwdSensors:LED||`` colour to ``||control:Black||``.
+Clique sur ``||fwdSensors:Sensors||``. Ensuite, fait glisser et imbrique le bloc ``||fwdSensors:set all ledRing to||`` dans le bloc ``||fwdSensors:on touch down||`` qui se trouve sous le bloc ``||fwdMotors:set middleServo to 0%||``.
+Change le ``||fwdSensors:LED||`` en couleur ``||control:Black||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     fwdMotors.middleServo.fwdSetSpeed(0)
@@ -558,12 +534,11 @@ turbinespeed = 0
 ```
 
 ## Step 33
-``|Download|`` and test your code. Click the bulb icon to see how
-the simulator shows the components working.
+Clique sur ``|Download|`` et teste ton code. Clique sur l’icône de l’ampoule pour voir comment le simulateur montre le fonctionnement des composants.
 ![dial-servo](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/simulator-13-wind.gif)
 
 ## Step 34 @showdialog
-Congratulations on completing your Power Storage for Wind Energy Project! 
+Félicitations pour la réalisation de ton projet Stockage d’Énergie Éolienne !
 
 ## Step 35 @showdialog
-After your project is complete, go back to the lesson for more challenges and extensions.
+Une fois ton projet terminé, reviens à la leçon pour plus de défis et d’extensions.
