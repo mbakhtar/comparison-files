@@ -5,49 +5,45 @@ Dial=github:climate-action-kits/pxt-fwd-edu
 ```
 
 ## Step 1 @showdialog
-Welcome to Powering the Future with Wind Energy Coding Tutorial.
+Bienvenue au tutoriel de codage Alimenter l’avenir avec l’énergie éolienne.
 ![built project](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/project-windturbine-200.png)
 
 ## Step 2 @showdialog
-In this tutorial we will code the Dial component to turn the wind turbine in the same direction as the Dial is being turned.
-Use the Dial's button function to stop the wind turbine.
+Dans ce tutoriel, nous allons coder le composant sélecteur pour faire tourner la turbine éolienne dans le même sens que le sélecteur tourne. Utilise la fonction bouton du sélecteur pour arrêter la turbine éolienne.
 
 ## Step 3 @showdialog
-Turn on the Climate Action Kit board.
+Allume la plaque du kit d’Action pour le Climat.
 ![breakout board](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/breakout-turn-on.png)
 
 ## Step 4 @showhint
-Click three dots besides ``|Download|`` button, and click on _Connect Device_.
-Next, follow the steps to pair your micro:bit.
+Clique sur les trois points à côté du bouton ``|Download|`` et suivez les étapes pour coupler ton micro:bit.
 ![pair gif](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/pairmicrobit-280x203.gif)
 
 ## Step 5 @showhint
-Next, click the ``|Download|`` button to download the blank project to start-up the simulators.
+Ensuite, clique sur le bouton ``|Download|`` pour télécharger la base du projet blanc qui te permettra d’effectuer les simulations.
 
 ## Step 6 @showdialog
-This is how the simulators should look after a successful download. You can see the Dial,
-the Touch and the Servo Motors along side the Pump.
+Voici à quoi devraient ressembler les simulateurs une fois le téléchargement réussi. Tu peux voir le sélecteur, le senseur tactile et les servomoteurs à côté de la pompe.
 ![initial-dowload-gif](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/initial-download.gif)
 
 ## Step 7 @showhint
-Look below the @boardname@ simulator to see the Climate Action Board and the connected sensors.
-Try turning the Dial on your project, the virtual  simulator will react to it.
+Regarde sous le simulateur micro:bit pour voir la plaque d’Action pour le Climat et les capteurs connectés. Essaye d’activer le sélecteur sur votre projet, le simulateur virtuel y réagira.
 ![wind](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/simulator-6-Dial.gif)
 
 ## Step 8
-Click ``||fwdSensors:Sensors||`` drag and drop
-``||fwdSensors:on dial1 turned difference||`` block in workspace.
+Clique sur ``||fwdSensors:Sensors||``. Ensuite, fait glisser et dépose le bloc
+``||fwdSensors:on dial1 turned difference||`` dans l’espace de travail.
 ```blocks
 fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (difference) {
     })
 ```
 
 ## Step 9
-Right click ``||fwdSensors:on dial1 turned difference||`` block and duplicate. _Note: New block will be grey._
+Fait clic droit sur le bloc ``||fwdSensors:on dial1 turned difference||``  et duplique-le. _Remarque : Le nouveau bloc sera gris._
 ![greyed out example](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/dial-greyed-out-demo.png)
 
 ## Step 10
-Change the direction arrow of the greyed out ``||fwdSensors:on dial1 turned difference||`` block. _Note: Greyed out block will turn green._
+Change la flèche directionnelle du bloc atténué ``||fwdSensors:on dial1 turned difference||``._Remarque : Le bloc atténué deviendra vert._
 ![dial direction](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/dial-direction-switch.gif)
 ```blocks
 fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (difference) {
@@ -57,8 +53,8 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 
 ## Step 11
-Click ``||fwdSensors:Sensors||`` drag and drop
-``||fwdSensors:on touch down||`` block in workspace.
+Clique sur ``||fwdSensors:Sensors||`` Ensuite, fait glisser et dépose le bloc
+``||fwdSensors:on touch down||`` dans l’espace de travail.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     })
@@ -69,10 +65,10 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 
 ## Step 12
-Click ``||fwdMotors:Motors||`` drag and drop
-``||fwdMotors:set leftServo to 50 %||`` inside
-``||fwdSensors:on dial1 turned difference||`` block.
-Change ``||fwdMotors:leftServo||`` to ``||fwdMotors:middleServo||``.
+Clique sur ``||fwdMotors:Motors||``. Ensuite, fait glisser et dépose le bloc
+``||fwdMotors:set leftServo to 50 %||`` à l’intérieur du bloc
+``||fwdSensors:on dial1 turned difference||``.
+Après, change ``||fwdMotors:leftServo||`` au ``||fwdMotors:middleServo||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     })
@@ -84,8 +80,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 
 ## Step 13
-Right click ``||fwdMotors:set middleServo to 50 %||`` block and duplicate.
-Drag and drop inside the second ``||fwdSensors:on dial1 turned difference||`` block.
+Fait clic droit sur le bloc ``||fwdMotors:set middleServo to 50 %||`` et duplique-le. Ensuite, fait-le glisser et dépose-le à l’intérieur du deuxième bloc ``||fwdSensors:on dial1 turned difference||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     })
@@ -98,7 +93,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 
 ## Step 14
-Click ``||fwdSensors:Sensors||``. Drag ``||fwdSensors:dial1 absolute position||`` oval block close to ``||fwdMotors:set middleServo 50 %||`` replace ``||fwdMotors:50 %||`` of ``||fwdMotors:set middleServo 50 %||`` block.
+Fait clic sur ``||fwdSensors:Sensors||``. Ensuite, fait glisser le bloc avec une forme ovale ``||fwdSensors:dial1 absolute position||`` près du bloc ``||fwdMotors:set middleServo 50 %||``. Remplace le ``||fwdMotors:50 %||`` dans le bloc ``||fwdMotors:set middleServo 50 %||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 })
@@ -111,9 +106,8 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 
 ## Step 15
-Click ``||fwdSensors:Sensors||``.
-Drag ``||fwdSensors:dial1 absolute position||`` oval block close to
-the second ``||fwdMotors:set middleServo 50 %||`` replace ``||fwdMotors:50 %||`` of ``||fwdMotors:set middleServo 50 %||`` block.
+Clique sur ``||fwdSensors:Sensors||``.
+Ensuite, fait glisser le bloc avec une forme ovale ``||fwdSensors:dial1 absolute position||`` près du deuxième  bloc ``||fwdMotors:set middleServo 50 %||``. Remplace le ``||fwdMotors:50 %||`` dans le bloc ``||fwdMotors:set middleServo 50 %||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 })
@@ -126,7 +120,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 
 ## Step 16
-Click ``||fwdMotors:Motors||`` drag and drop ``||fwdMotors:set leftServo 50 %||`` block inside ``||fwdSensors:on touch down||`` block. Change ``||fwdMotors:leftServo||`` to ``||fwdMotors:middleServo||``.
+Clique sur ``||fwdMotors:Motors||``. Ensuite, fait glisser et dépose le bloc ``||fwdMotors:set leftServo 50 %||`` à l'intérieur du bloc ``||fwdSensors:on touch down||``. Change ``||fwdMotors:leftServo||`` au ``||fwdMotors:middleServo||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     fwdMotors.middleServo.fwdSetSpeed(50)
@@ -140,8 +134,8 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 
 ## Step 17
-Change speed of ``||fwdMotors:set middleServo 50 %||`` block inside ``||fwdSensors:on touch down||``
-to ``||0||``.
+Change la vitesse du bloc ``||fwdMotors:set middleServo 50 %||`` à l'intérieur du bloc ``||fwdSensors:on touch down||``
+en ``||0||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     fwdMotors.middleServo.fwdSetSpeed(0)
@@ -155,21 +149,18 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 
 ## Step 18 @showhint
-``|Download|`` and test your code. Click the bulb icon to see how
-the simulator shows the components working.
+Clique sur ``|Download|`` et teste ton code. Clique sur l’icône de l’ampoule pour voir comment le simulateur montre le fonctionnement des composants.
 ![dial-middleServo](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/dial-middleServo.gif)
 
 ## Step 19 @showdialog
-If after ``|Downloading|`` your project does not work please refer to the
-image and make sure your components are assigned correctly.
+Si après d’avoir complété le ``|Downloading|`` ton projet ne fonctionne pas, regarde l’image et assure-toi que tes composants sont correctement assignés.
 ![correct-assignment](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/correct-assignment.png)
 
 ## Step 20 @showdialog
-Need help in assigning the right components to their simulators. Watch the video.
+Si tu as besoin d’aide pour assigner les bons composants à leur simulateurs. Regarde la vidéo.
 ![final-download](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/final-download.gif)
 
 ## Step 21 @showdialog
-Congratulations on completing your Powering the Future with Wind Energy Project!
-
+Félicitations pour la réalisation de ton projet Alimenter l’Avenir avec l’Énergie Éolienne !
 ## Step 22 @showdialog
-After your project is complete go back to the lesson for more challenges and extensions.
+Une fois que tu as terminé ton projet, reviens à la leçon pour plus de défis et d’extensions.
