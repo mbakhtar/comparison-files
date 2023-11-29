@@ -157,7 +157,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (differen
 ```
 ## Step 18
 Click on ``||Variables:Variables||`` drag and drop ``||Variables:set start_time to 0||``
-inside ``||Basic:on start||`` block. Repeat this for all the ``||Variables:Variables||``.
+inside ``||Basic:on start||`` block. Repeat this for ``||Variables:set stop_time to 0||`` block.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -189,7 +189,7 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 ## Step 20
-Click ``||Input:Input||`` drag and drop ``||Input:on button A pressed||`` block on the workspace.
+Click ``||Input:Input||`` drag and drop another ``||Input:on button A pressed||`` block on the workspace.
 _Note: This block will be greyed out._ Change the ``||Input:button A||`` to ``||Input:button B||``.
 ```blocks
 let stop_time = 0
@@ -350,7 +350,7 @@ basic.showNumber((stop_time - start_time)/1000)
 })
 ```
 ## Step 27
-Click ``||Input:Input||`` drag and drop ``||Input:running time||`` block to replace
+Click ``||Input:Input||`` and then ``||Input:...more||`` drag and drop ``||Input:running time||`` block to replace
 ``||0||`` in ``||Variables:start_time||`` and ``||Variables:stop_time||``
 nested in ``||Input:on button A pressed||`` and ``||Input:on button B pressed||``
 respectively.
