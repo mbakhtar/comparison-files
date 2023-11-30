@@ -328,4 +328,5 @@ basic.forever(function () {
 
 ## Step 26
 Click on ``||Show Data Simulator||`` button. Change the Light Level indicator on
-the @boardname@ to see the graph changing. _Note:Increase the light level to more than 128 to see the changes._
+the @boardname@ to see the graph changing. _Note:Increase the light level to more than 128 to see the changes._ 
+Here is the link to the final [code](https://makecode.microbit.org/_8JtL9Ch1qihb)
