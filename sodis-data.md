@@ -279,11 +279,23 @@ basic.forever(function () {
 ## Step 22
 ``|Download|`` and test your code. 
 Congratulations on completing your SODIS project!
-
-## Step 23 @showdialog
-Would like to add Data Logging capability to your project. Click "OK"
-
-## Step 24 
+```template
+let totalLightExposure = 0
+let exposure_start_time = 0
+basic.forever(function () {
+    if (input.lightLevel() > 128) {
+        totalLightExposure += input.runningTime() - exposure_start_time
+        exposure_start_time = input.runningTime()
+        if (totalLightExposure > 6 * 3600 * 1000) {
+            basic.showIcon(IconNames.Happy)
+            basic.showString("Safe")
+        }
+    } else {
+        basic.showString("Not Safe")
+    }
+})
+```
+## Step 23
 Click ``||Advanced:Advanced||`` then ``||Serial:Serial||`` drag and drop ``||Serial:serial write value x = 0||``
 block inside ``||Basic:forever||`` loop and under ``||Logic:if else||``
 condition.
@@ -304,7 +316,7 @@ basic.forever(function () {
         )}
 ```
 
-## Step 25
+## Step 24
 Change ``||Serial:x||`` to ``||Serial:light||``. Click ``||Input:Input||``
 drag and drop ``||Input:light level||`` block to replace ``||Serial:0||`` 
 of ``||Serial:serial write value x = 0||``
@@ -326,7 +338,7 @@ basic.forever(function () {
         )}
 ```
 
-## Step 26
+## Step 25
 Click on ``||Show Data Simulator||`` button. Change the Light Level indicator on
 the @boardname@ to see the graph changing. _Note:Increase the light level to more than 128 to see the changes._ 
 Here is the link to the final [code](https://makecode.microbit.org/_8JtL9Ch1qihb)
