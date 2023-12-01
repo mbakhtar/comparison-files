@@ -58,7 +58,15 @@ fwdMotors.rightServo,
 
 ## Step 10
 Click ``||Variables:Variables||`` drag and drop ``||Variables:item = 0||`` block.
-Change ``||Variables:item||`` to ``||Variables:IsDrivingEnabled||``.
+Change ``||Variables:item = 0||`` to ``||Variables:IsDrivingEnabled = false||``.
+```spy
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo,
+0
+)
+IsDrivingEnabled = false
+```
 
 ## Step 11
 Click ``||basic:Basic||`` drag and drop ``||basic:run code forever||`` loop.
@@ -68,14 +76,21 @@ fwdMotors.leftServo,
 fwdMotors.rightServo,
 0
 )
+IsDrivingEnabled = false
 basic.forever(function () {
 })
 ```
 
 ## Step 12
-Click ``||Input:Input||`` drag and drop ``||Input:run code on button button pressed||`` block. 
-Repeat to get another ``||Input:run code on button button pressed||`` block. 
-Change ``||Input:A||`` to ``||Input:B||``.
+Click ``||Input:Input||`` drag and drop ``||Input:run code on button pressed||`` block. 
+Repeat to get another ``||Input:run code on button pressed||`` block. 
+
+- Change ``||Input:A||`` to ``||Input:B||`` in the following statement:
+- ``||Input:def on_button_pressed_a():||``
+ 
+- Change both ``||Input:As||`` to ``||Input:Bs||`` in the following statement:
+- ``||Input:input.on_button_pressed(Button.A, on_button_pressed_a)||``
+
 ```spy
 input.onButtonPressed(Button.A, function () {
 })
@@ -86,14 +101,15 @@ fwdMotors.leftServo,
 fwdMotors.rightServo,
 0
 )
+IsDrivingEnabled = false
 basic.forever(function () {
 })
 ```
 
 ## Step 13
-Click ``||Variables:Variables||`` drag and drop ``||Variables:set IsDrivingEnabled to 0||`` block inside
+Click ``||Variables:Variables||`` drag and drop ``||Variables:item = 0||`` block inside
 ``||Input:on button A pressed||`` block and also inside 
-``||Input:on button B pressed||`` block.
+``||Input:on button B pressed||`` block. Change ``||Variables:item||`` to ``||Variables:IsDrivingEnabled||``.
 ```spy
 input.onButtonPressed(Button.A, function () {
     IsDrivingEnabled = 0
@@ -107,14 +123,14 @@ fwdMotors.leftServo,
 fwdMotors.rightServo,
 0
 )
+IsDrivingEnabled = false
 basic.forever(function () {
 })
 ```
 
 ## Step 14
-Click ``||Logic:Logic||`` drag and drop ``||Logic:true||`` block and replace 
-``||0||`` of ``||Variables:set IsDrivingEnabled to 0||`` block under 
-``||Input:on button A pressed||``.
+Change ``||Variables:IsDrivingEnabled = 0||`` to ``||Variables:IsDrivingEnabled = true||``
+inside ``||Input:on button A pressed||``.
 ```spy
 input.onButtonPressed(Button.A, function () {
     IsDrivingEnabled = true
@@ -127,14 +143,14 @@ fwdMotors.leftServo,
 fwdMotors.rightServo,
 0
 )
+IsDrivingEnabled = false
 basic.forever(function () {
 })
 ```
 
 ## Step 15
-Click ``||Logic:Logic||`` drag and drop ``||Logic:false||`` block and replace 
-``||0||`` of ``||Variables:set IsDrivingEnabled to 0||`` block under 
-``||Input:on button B pressed||``.
+Change ``||Variables:IsDrivingEnabled = 0||`` to ``||Variables:IsDrivingEnabled = false||``
+inside ``||Input:on button B pressed||``.
 ```spy
 input.onButtonPressed(Button.A, function () {
     IsDrivingEnabled = true
@@ -147,6 +163,7 @@ fwdMotors.leftServo,
 fwdMotors.rightServo,
 0
 )
+IsDrivingEnabled = false
 basic.forever(function () {
 })
 ```
@@ -167,6 +184,7 @@ fwdMotors.leftServo,
 fwdMotors.rightServo,
 0
 )
+IsDrivingEnabled = false
 basic.forever(function () {
     if (true) {
     }
@@ -205,8 +223,9 @@ basic.forever(function () {
 
 ## Step 18
 Erase the word ``||pass||`` inside ``||basic:forever||`` loop.
-Click ``||Variables:Variables||`` drag and drop ``||Variables:IsDrivingEnabled||`` block
+Click ``||Variables:Variables||`` drag and drop ``||Variables:item = 0||`` block
 to replace ``||Logic:true||`` condition of ``||Logic:if true then||`` block.
+Change ``||Variables:item = 0||`` to ``||Variables:IsDrivingEnabled||``.
 ```spy
 input.onButtonPressed(Button.A, function () {
     IsDrivingEnabled = true
