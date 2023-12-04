@@ -510,6 +510,7 @@ Change le ``||fwdSensors:LED||`` en couleur ``||control:Noir||``
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
+fwdSensors.ledRing.fwdSetAllPixelsColour(0x000000)
 })
 fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (difference) {
     turbinespeed = fwdSensors.dial1.fwdPosition()
