@@ -108,8 +108,8 @@ basic.forever(function () {
 
 ## Step 13
 Click ``||Variables:Variables||`` drag and drop ``||Variables:item = 0||`` block inside
-``||Input:on button A pressed||`` block and also inside 
-``||Input:on button B pressed||`` block. Change ``||Variables:item||`` to ``||Variables:IsDrivingEnabled||``.
+``||Input:on button pressed A()||`` block and also inside 
+``||Input:on button pressed B()||`` block. Change ``||Variables:item||`` to ``||Variables:IsDrivingEnabled||``.
 ```spy
 input.onButtonPressed(Button.A, function () {
     IsDrivingEnabled = 0
@@ -130,7 +130,7 @@ basic.forever(function () {
 
 ## Step 14
 Change ``||Variables:IsDrivingEnabled = 0||`` to ``||Variables:IsDrivingEnabled = true||``
-inside ``||Input:on button A pressed||``.
+inside ``||Input:on button pressed A()||``.
 ```spy
 input.onButtonPressed(Button.A, function () {
     IsDrivingEnabled = true
@@ -150,7 +150,7 @@ basic.forever(function () {
 
 ## Step 15
 Change ``||Variables:IsDrivingEnabled = 0||`` to ``||Variables:IsDrivingEnabled = false||``
-inside ``||Input:on button B pressed||``.
+inside ``||Input:on button pressed B()||``.
 ```spy
 input.onButtonPressed(Button.A, function () {
     IsDrivingEnabled = true
@@ -195,7 +195,7 @@ basic.forever(function () {
 
 ## Step 17
 Click ``||logic:Logic||`` drag and drop ``||logic:if else||`` block
-inside ``||Logic:if true then||`` block.
+to nest inside the previous ``||Logic:if else|`` block.
 ```spy
 input.onButtonPressed(Button.A, function () {
     IsDrivingEnabled = true
@@ -224,7 +224,7 @@ basic.forever(function () {
 ## Step 18
 Erase the word ``||pass||`` inside ``||basic:forever||`` loop.
 Click ``||Variables:Variables||`` drag and drop ``||Variables:item = 0||`` block
-to replace ``||Logic:true||`` condition of ``||Logic:if true then||`` block.
+to replace ``||Logic:true||`` condition of ``||Logic:if else||`` block.
 Change ``||Variables:item = 0||`` to ``||Variables:IsDrivingEnabled||``.
 ```spy
 input.onButtonPressed(Button.A, function () {
@@ -253,7 +253,7 @@ basic.forever(function () {
 
 ## Step 19
 Erase the word ``||pass||`` inside ``||logic:else :||`` loop.
-Click ``||fwdMotors:Motors||`` drag and drop ``||fwdMotors:drive direction at speed||``
+Click ``||fwdMotors:Motors||`` drag and drop ``||fwdMotors:stop motors||``
 block inside ``||Logic:else condition||``.
 ```spy
 input.onButtonPressed(Button.A, function () {
@@ -280,9 +280,9 @@ basic.forever(function () {
 ```
 
 ## Step 20
-Erase the word ``||True||``. Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors:this distance is direction threshold m||``
-block for ``||logic:If :||`` condition. Change threshold distance to 0.2.
-Also change ``||OVER to UNDER||``.
+Erase the word ``||Logic:true||``. Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors:this distance is direction threshold m||``
+block for ``||logic:If :||`` condition. Change threshold distance to ``||fwdSensors:0.2||``.
+Also change ``||fwdSensors:OVER to UNDER||``.
 ```spy
 input.onButtonPressed(Button.A, function () {
     IsDrivingEnabled = true
