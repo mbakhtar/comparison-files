@@ -1,4 +1,4 @@
-# Powering the Future with Wind Energy
+# Impulsando el Futuro con Energía Eólica
 ```package
 fwd-edu-breakout=github:climate-action-kits/pxt-fwd-edu/fwd-breakout
 Dial=github:climate-action-kits/pxt-fwd-edu
@@ -66,7 +66,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 
 ## Step 12
 Da clic en ``||fwdMotors:Motores||`` . Luego, arrastra y suelta el bloque
-``||fwdMotors:establecer   leftServo a 50 %||`` dentro del bloque
+``||fwdMotors:establecer leftServo a 50 %||`` dentro del bloque
 ``||fwdSensors:en dial1 girado por difference||``.
 Después, cambia ``||fwdMotors:leftServo||`` a ``||fwdMotors:middleServo||``.
 ```blocks
