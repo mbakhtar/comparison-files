@@ -69,8 +69,8 @@ Da clic en ``||Variables:Variables||`` en y crea una ``||Variables:Variable||``
 ``||Variables:turbinespeed||``.
 
 ## Step 13
-Da clic en ``||Variables:Variables||``. Luego, arrastra y suelta el bloque ``||Variables:set turbinespeed to 0||``
-dentro del bloque ``||Basic:en start||``.
+Da clic en ``||Variables:Variables||``. Luego, arrastra y suelta el bloque ``||Variables:fijar turbinespeed a 0||``
+dentro del bloque ``||Basic:al iniciar||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 })
@@ -82,7 +82,7 @@ turbinespeed = 0
 ```
 
 ## Step 14
-Da clic en ``||Variables:Variables||``. Luego, arrastra y suelta el bloque ``||Variables:set turbinespeed to 0||``
+Da clic en ``||Variables:Variables||``. Luego, arrastra y suelta el bloque ``||Variables:fijar turbinespeed a 0||``
 dentro del bloque ``||fwdSensors:en dial1 girado difference||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
@@ -97,7 +97,7 @@ turbinespeed = 0
 ```
 
 ## Step 15
-Da clic en ``||Variables:Variables||``. Luego, arrastra y suelta el bloque ``||Variables:set turbinespeed to 0||``
+Da clic en ``||Variables:Variables||``. Luego, arrastra y suelta el bloque ``||Variables:fijar turbinespeed a 0||``
 dentro del otro bloque ``||fwdSensors:en dial1 girado difference||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
@@ -113,8 +113,8 @@ turbinespeed = 0
 ```
 
 ## Step 16
-Da clic en ``||fwdMotors:Motors||``. Luego, arrastra y suelta el bloque
-``||fwdMotors:set leftServo to 50 %||`` bajo el bloque ``||Variables:set turbinespeed to 0||``.
+Da clic en ``||fwdMotors:Motores||``. Luego, arrastra y suelta el bloque
+``||fwdMotors:establecer leftServo 50 %||`` bajo el bloque ``||Variables:fijar turbinespeed a 0||``.
 Después, cambia  ``||fwdMotors:leftServo||`` a ``||fwdMotors:middleServo||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
@@ -131,7 +131,7 @@ turbinespeed = 0
 ```
 
 ## Step 17
-Da clic derecho en el bloque ``||fwdMotors:set middleServo to 50 %||`` y duplícalo. Luego, arrástralo y suéltalo bajo el otro bloque ``||Variables:set turbinespeed to 0||``.
+Da clic derecho en el bloque ``||fwdMotors:establecer middleServo 50 %||`` y duplícalo. Luego, arrástralo y suéltalo bajo el otro bloque ``||Variables:fijar turbinespeed a 0||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     fwdMotors.middleServo.fwdSetSpeed(0)
@@ -149,7 +149,7 @@ turbinespeed = 0
 ```
 
 ## Step 18
-Da clic en ``||fwdMotors:Motors||``.Luego, arrastra y suelta el bloque ``||fwdMotors:set leftServo to 50 %||`` bajo el bloque
+Da clic en ``||fwdMotors:Motores||``.Luego, arrastra y suelta el bloque ``||fwdMotors:establecer leftServo 50 %||`` bajo el bloque
 ``||fwdSensors:en touch down||``.
 Cambia ``||fwdMotors:leftServo||`` a ``||fwdMotors:middleServo||``. Cambia ``||fwdMotors:50%||`` a ``||fwdMotors:0%||``
 ```blocks
@@ -170,7 +170,7 @@ turbinespeed = 0
 ## Step 19
 Da clic en ``||fwdSensors:Sensores||``.
 Luego, arrastra el bloque en forma de óvalo ``||fwdSensors:dial1 absolute position||``
-cerca del bloque ``||Variables:set turbinespeed to 0||`` para reemplazar el ``||Variables:0||`` del bloque ``||Variables:set turbinespeed to 0||``.
+cerca del bloque ``||Variables:fijar turbinespeed a 0||`` para reemplazar el ``||Variables:0||`` del bloque ``||Variables:fijar turbinespeed a 0||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -189,7 +189,7 @@ turbinespeed = 0
 
 ## Step 20
 Da clic en ``||fwdSensors:Sensores||``Luego, arrastra el bloque en forma de óvalo ``||fwdSensors:dial1 absolute position||``
-cerca del otro bloque ``||Variables:set turbinespeed to 0||`` para reemplazar el ``||Variables:0||`` del bloque ``||Variables:set turbinespeed to 0||``.
+cerca del otro bloque ``||Variables:fijar turbinespeed a 0||`` para reemplazar el ``||Variables:0||`` del bloque ``||Variables:fijar turbinespeed a 0||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -208,7 +208,7 @@ turbinespeed = 0
 
 ## Step 21
 Da clic en ``||Variables:Variables||``. Luego, arrastra el bloque en forma de óvalo ``||Variables:turbinespeed||``
-cerca del bloque ``||fwdMotors:set middleServo to 50 %||`` para reemplazar el ``||fwdMotors:50||`` del bloque ``||fwdMotors:set middleServo to 50 %||``.
+cerca del bloque ``||fwdMotors:establecer middleServo 50 %||`` para reemplazar el ``||fwdMotors:50||`` del bloque ``||fwdMotors:establecer middleServo 50 %||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -228,7 +228,7 @@ turbinespeed = 0
 ## Step 22
 Da clic en ``||Variables:Variables||``
 . Luego, arrastra el bloque en forma de óvalo  ``||Variables:turbinespeed||``
-cerca del otro bloque ``||fwdMotors:set middleServo to 50 %||`` para reemplazar el ``||fwdMotors:50||`` del bloque ``||fwdMotors:set middleServo to 50 %||``.
+cerca del otro bloque ``||fwdMotors:establecer middleServo 50 %||`` para reemplazar el ``||fwdMotors:50||`` del bloque ``||fwdMotors:establecer middleServo 50 %||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -246,7 +246,7 @@ turbinespeed = 0
 ```
 
 ## Step 23
-Da clic en ``||Logic:Logic||`` . Luego, arrastra y suelta el bloque ``||Logic:if true then else||`` bajo el bloque ``||fwdMotors:set middleServo||`` ``||Variables:turbinespeed||``.
+Da clic en ``||Logic:Logic||`` . Luego, arrastra y suelta el bloque ``||Logic:if true then else||`` bajo el bloque ``||fwdMotors:establecer middleServo||`` ``||Variables:turbinespeed||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -268,7 +268,7 @@ turbinespeed = 0
 ```
 
 ## Step 24
-Da clic en ``||Logic:Logic||``. Luego, arrastra y suelta el bloque ``||Logic:if true then else||`` bajo el otro bloque ``||fwdMotors:set middleServo||`` ``||Variables:turbinespeed||``.
+Da clic en ``||Logic:Logic||``. Luego, arrastra y suelta el bloque ``||Logic:if true then else||`` bajo el otro bloque ``||fwdMotors:establecer middleServo||`` ``||Variables:turbinespeed||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 fwdMotors.middleServo.fwdSetSpeed(0)
@@ -505,7 +505,7 @@ turbinespeed = 0
 ```
 
 ## Step 32
-Da clic en ``||fwdSensors:Sensores||``. Luego, arrastra y suelta el bloque ``||fwdSensors:set all ledRing to||`` dentro del bloque ``||fwdSensors:en touch down||`` que se encuentra bajo el bloque ``||fwdMotors:set middleServo to 0%||``.
+Da clic en ``||fwdSensors:Sensores||``. Luego, arrastra y suelta el bloque ``||fwdSensors:set all ledRing to||`` dentro del bloque ``||fwdSensors:en touch down||`` que se encuentra bajo el bloque ``||fwdMotors:establecer middleServo 0 %||``.
 Cambia el ``||fwdSensors:LED||`` a color ``||control:Black||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
