@@ -39,11 +39,11 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (differen
 ```
 
 ## Step 9
-Da clic derecho en el bloque ``||fwdSensors:en dial1 girado por difference||`` y duplícalo. Nota: El nuevo bloque será de color gris.
+Da clic derecho en el bloque ``||fwdSensors:en dial1 girado por difference||`` y duplícalo. _Nota: El nuevo bloque será de color gris._
 ![greyed out example](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/dial-greyed-out-demo.png)
 
 ## Step 10
-Cambia la flecha de dirección del bloque ``||fwdSensors:en dial1 girado por difference||`` atenuado . Nota: El bloque atenuado se volverá verde.
+Cambia la flecha de dirección del bloque ``||fwdSensors:en dial1 girado por difference||`` atenuado . _Nota: El bloque atenuado se volverá verde._
 ![dial direction](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/dial-direction-switch.gif)
 ```blocks
 fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (difference) {
