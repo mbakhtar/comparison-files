@@ -1,4 +1,4 @@
-# Protecting Pollinators with a Bee Counter - Code
+# Smart Farming with Automated Watering - Code
 ```package
 =github:climate-action-kits/pxt-fwd-edu/fwd-breakout
 =github:climate-action-kits/pxt-fwd-edu
