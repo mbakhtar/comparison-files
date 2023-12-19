@@ -1,4 +1,4 @@
-# Comment les éoliennes capturent l'énergie cinétique
+# Comment les turbines éoliennes capturent  l’énergie cinétique
 ```package
 fwd-edu-breakout=github:climate-action-kits/pxt-fwd-edu/fwd-breakout
 =github:climate-action-kits/pxt-fwd-edu
