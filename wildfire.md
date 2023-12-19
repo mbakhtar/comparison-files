@@ -276,7 +276,7 @@ basic.forever(function () {
 ```
 
 ## Step 20
-Click ``||fwdMotors:Motors||`` drag and drop ``||fwdMotors:drive forward at 50||``block.
+Click ``||fwdMotors:Motors||`` drag and drop ``||fwdMotors:drive forward at 50||`` block.
 ```blocks
 input.onButtonPressed(Button.A, function () {
     IsDrivingEnabled = true
@@ -365,8 +365,8 @@ basic.forever(function () {
 })
 ```
 
-## Step 23 - continue updatting on wards
-Click ``||Logic:Logic||`` drag and drop ``||Logic:0 < 0||``
+## Step 23
+Click ``||Logic:Logic||`` drag and drop ``||Logic: or ||``
 block to replace ``||Logic:true||`` condition under 
 of ``||Logic:if true then||`` block under ``||fwdMotors:turn 25' in place||`` block.
 ```blocks
@@ -387,7 +387,99 @@ basic.forever(function () {
             fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
             basic.pause(5000)
             fwdMotors.turn(25)
-           if (0 < 0) {
+           if (0 || 0) {
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+## Step 24
+Click ``||Logic:Logic||`` drag and drop ``||Logic: or ||``
+block to replace left side of ``||Logic: or ||`` block condition.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+           if (0 || 0 || 0) {
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+
+## Step 25
+Click ``||Logic:Logic||`` drag and drop ``||Logic: 0 < 0||``
+block to replace left side of ``||Logic: or ||`` block condition.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+           if (0 < 0  || 0 || 0) {
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+
+## Step 26
+Click ``||Logic:Logic||`` drag and drop ``||Logic: 0 < 0||``
+block to replace middle ``||Logic: or ||`` block condition.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+           if (0 < 0  || 0 < 0 || 0) {
             } else {
             }
         }
@@ -398,9 +490,226 @@ basic.forever(function () {
 ```
 
 ## Step 27
-Erase the word ``||pass||`` inside ``||logic:else :||`` loop.
-Click ``||fwdMotors:Motors||`` drag and drop ``||fwdMotors:drive direction at speed||``
-block inside ``||Logic:else condition||``.
+Click ``||Logic:Logic||`` drag and drop ``||Logic: 0 < 0||``
+block to replace right ``||Logic: or ||`` block condition.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+           if (0 < 0  || 0 < 0 || 0 < 0) {
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+## Step 28
+Click ``||Variables:Variables||`` drag and drop ``||Variables:lightThreshold||``
+block to replace left ``||Logic:0||`` of ``||Logic:Comparison||`` condition.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+           if (lightThreshold < 0  || 0 < 0 || 0 < 0) {
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+## Step 29
+Click ``||Variables:Variables||`` drag and drop ``||Variables:temperatureThreshold||``
+block to replace left ``||Logic:0||`` of middle ``||Logic:Comparison||`` condition.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+           if (lightThreshold < 0  || temperatureThreshold < 0 || 0 < 0) {
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+
+## Step 30
+Click ``||Variables:Variables||`` drag and drop ``||Variables:soundThreshold||``
+block to replace left ``||Logic:0||`` of right ``||Logic:Comparison||`` condition.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+           if (lightThreshold < 0  || temperatureThreshold < 0 || soundThreshold < 0) {
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+
+## Step 31
+Click ``||Input:Input||`` drag and drop ``||Input:light level||``
+block to replace right ``||Logic:0||`` of  ``||Logic:Comparison||`` condition with
+``||Variables:lightThreshold||`` block on the left.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+           if (lightThreshold < input.lightLevel()  || temperatureThreshold < 0 || soundThreshold < 0) {
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+
+## Step 32
+Click ``||Input:Input||`` drag and drop ``||Input:temperature ('C)||``
+block to replace right ``||Logic:0||`` of  ``||Logic:Comparison||`` condition with
+``||Variables:temperatureThreshold||`` block in the middle.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+           if (lightThreshold < input.lightLevel()  || temperatureThreshold < input.temperature() || soundThreshold < 0) {
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+
+## Step 33
+Click ``||Input:Input||`` drag and drop ``||Input:sound level||``
+block to replace right ``||Logic:0||`` of  ``||Logic:Comparison||`` condition with
+``||Variables:lightThreshold||`` block on the right.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+           if (lightThreshold < input.lightLevel()  || temperatureThreshold < input.temperature() || soundThreshold < input.soundLevel()) {
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+
+## Step 34
+Click ``||Loops:Loops||`` drag and drop ``||Loops:repeat 4 times||``
+block to nest inside ``||Logic:if true then||`` block.
 ```blocks
 input.onButtonPressed(Button.A, function () {
     IsDrivingEnabled = true
@@ -424,7 +733,120 @@ basic.forever(function () {
             fwdMotors.turn(25)
             if (input.lightLevel() > lightThreshold || input.temperature() > temperatureThreshold || input.soundLevel() > soundThreshold) {
                 for (let index = 0; index < 4; index++) {
-                    music.playTone(262, music.beat(BeatFraction.Double))
+                    }
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+
+## Step 35
+Click ``||Music:Music||`` drag and drop two ``||Music:play tone Middle C for 1 beat||``
+blocks to nest inside ``||Loops:repeat 4 times||`` block.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+let lightThreshold = 100
+let temperatureThreshold = 25
+let soundThreshold = 100
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+            if (input.lightLevel() > lightThreshold || input.temperature() > temperatureThreshold || input.soundLevel() > soundThreshold) {
+                for (let index = 0; index < 4; index++) {
+                    music.playTone(262, music.beat(BeatFraction.Whole))
+                    music.playTone(262, music.beat(BeatFraction.Whole))
+                }
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+## Step 36
+Click ``||Music:Music||`` drag and drop ``||Music:stop all sounds||``
+blocks to nest inside ``||Logic:else||`` condition.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+let lightThreshold = 100
+let temperatureThreshold = 25
+let soundThreshold = 100
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+            if (input.lightLevel() > lightThreshold || input.temperature() > temperatureThreshold || input.soundLevel() > soundThreshold) {
+                for (let index = 0; index < 4; index++) {
+                    music.playTone(262, music.beat(BeatFraction.Whole))
+                    music.playTone(262, music.beat(BeatFraction.Whole))
+                }
+            } else {
+                music.stopAllSounds()
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+
+
+## Step 37
+Click ``||Basic:Basic||`` drag and drop ``||Basic:pause (ms) 100||`` block under 
+``||Logic:else||`` condition. Change ``||Basic:100||`` to ``||Basic:1000||``.
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+let lightThreshold = 100
+let temperatureThreshold = 25
+let soundThreshold = 100
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+            if (input.lightLevel() > lightThreshold || input.temperature() > temperatureThreshold || input.soundLevel() > soundThreshold) {
+                for (let index = 0; index < 4; index++) {
+                    music.playTone(262, music.beat(BeatFraction.Whole))
                     music.playTone(262, music.beat(BeatFraction.Whole))
                 }
             } else {
@@ -438,27 +860,27 @@ basic.forever(function () {
 })
 ```
 
-## Step 28 @showhint
+## Step 38 @showhint
 ``|Download|`` and test your code. Click the bulb icon to see how
 the simulator shows the components working.
 ![sonar-servos](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/simulator-17-ev-obstacle.gif)
 
-## Step 29 @showhint
+## Step 39 @showhint
 ``|Download|`` and test your code. Click the bulb icon to see how
 the simulator shows the components working.
 ![servos](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/final-sim-tree.gif)
 
-## Step 30 @showdialog
+## Step 40 @showdialog
 If after ``|Downloading|`` your project does not work please refer to the
 image and make sure your components are assigned correctly.
 ![correct-assignment](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/correct-assignment-tree.png)
 
-## Step 31 @showdialog
+## Step 41 @showdialog
 Need help in assigning the right components to their simulators. Watch the video.
 ![final-download](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/servo-assign.gif)
 
-## Step 32 @showdialog
+## Step 42 @showdialog
 Congratulations on completing your Wildfire Tracking with Autonomous Vehicles Project!
 
-## Step 33 @showdialog
+## Step 43 @showdialog
 After your project is complete go back to the lesson for more challenges and extensions.
