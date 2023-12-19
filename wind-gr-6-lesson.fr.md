@@ -25,8 +25,8 @@ Ensuite, clique sur le bouton ``|Download|`` pour télécharger le projet vide a
 Regarde sous le simulateur @boardname@ pour voir la carte de la trousse d’action climatique et les capteurs connectés.  Essaie de tourner le cadran de ton projet, le simulateur virtuel y réagira.![wind](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/simulator-6-Dial.gif)
 
 ## Step 7
-Clique sur ``||fwdSensors:Capteurs||`` drag and drop
-``||fwdSensors:en dial1 tourné par difference||`` block in workspace.
+Clique sur ``||fwdSensors:Capteurs||``. Ensuite, fait glisser et dépose le bloc
+``||fwdSensors:en dial1 tourné par difference||`` dans l’espace de travail.
 ```blocks
 fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (difference) {
     })
@@ -45,8 +45,8 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
     })
 ```
 ## Step 10
-Clique sur ``||fwdSensors:Capteurs||`` drag and drop
-``||fwdSensors:on touch down||`` block in workspace.
+Clique sur ``||fwdSensors:Capteurs||``. Ensuite, fait glisser et dépose le bloc
+``||fwdSensors:on touch down||`` dans l’espace de travail.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     })
@@ -56,7 +56,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
     })
 ```
 ## Step 11
-Clique sur ``||fwdMotors:Moteurs||`` drag and drop
+Clique sur ``||fwdMotors:Moteurs||``. Ensuite, fait glisser et dépose le bloc
 ``||fwdMotors:mettre leftServo 50 %||`` inside
 ``||fwdSensors:en dial1 tourné par difference||`` block. Change ``||fwdMotors:leftServo||``
 to ``||fwdMotors:middleServo||``.
@@ -109,7 +109,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 })
 ```
 ## Step 15
-Clique sur ``||fwdMotors:Moteurs||`` drag and drop ``||fwdMotors:mettre leftServo 50 %||`` block
+Clique sur ``||fwdMotors:Moteurs||``. Ensuite, fait glisser et dépose le bloc ``||fwdMotors:mettre leftServo 50 %||`` block
  inside ``||fwdSensors:on touch down||`` block. Change ``||fwdMotors:leftServo||`` to ``||fwdMotors:middleServo||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
@@ -153,7 +153,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (differen
 })
 ```
 ## Step 18
-Clique sur on ``||Variables:Variables||`` drag and drop ``||Variables:définir start_time à 0||``
+Clique sur on ``||Variables:Variables||``. Ensuite, fait glisser et dépose le bloc ``||Variables:définir start_time à 0||``
 inside ``||Basic:au démarrage||`` block. Repeat this for ``||Variables:définir stop_time à 0||`` block.
 ```blocks
 let stop_time = 0
@@ -206,7 +206,7 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 ## Step 21
-Clique sur ``||Variables:Variables||`` drag and drop ``||Variables:définir start_time à 0||`` inside
+Clique sur ``||Variables:Variables||``. Ensuite, fait glisser et dépose le bloc ``||Variables:définir start_time à 0||`` inside
 ``||Input:on button A pressed||``.
 ```blocks
 let stop_time = 0
@@ -227,7 +227,7 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 ## Step 22
-Clique sur ``||Variables:Variables||`` drag and drop ``||Variables:définir stop_time à 0||`` inside
+Clique sur ``||Variables:Variables||``. Ensuite, fait glisser et dépose le bloc ``||Variables:définir stop_time à 0||`` inside
 ``||Input:on button B pressed||``.
 ```blocks
 let stop_time = 0
@@ -249,7 +249,7 @@ stop_time = 0
 })
 ```
 ## Step 23
-Clique sur ``||Basic:Basic||`` drag and drop ``||Basic:show number||`` block under
+Clique sur ``||Basic:Basic||``. Ensuite, fait glisser et dépose le bloc ``||Basic:show number||`` block under
 ``||Variables:définir stop_time à 0||`` inside ``||Input:on button B pressed||`` block.
 ```blocks
 let stop_time = 0
@@ -272,7 +272,7 @@ basic.showNumber(0)
 })
 ```
 ## Step 24
-Clique sur ``||Math:Math||`` drag and drop
+Clique sur ``||Math:Math||``. Ensuite, fait glisser et dépose le bloc
 ``||Math:Division operator||`` block to replace the ``||Basic:0||`` of
 ``||Basic:show number||`` block. For ``||Math:Division||`` change the 
 right ``||Math:0||`` to ``||Math:1000||``.
@@ -297,7 +297,7 @@ basic.showNumber(0/1000)
 })
 ```
 ## Step 25
-Clique sur ``||Math:Math||`` drag and drop
+Clique sur ``||Math:Math||``. Ensuite, fait glisser et dépose le bloc
 ``||Math:Subtraction operator||`` block to replace the left ``||Math:0||`` of
 ``||Math:0 / 1000||`` block. 
 ```blocks
@@ -321,7 +321,7 @@ basic.showNumber((0-0)/1000)
 })
 ```
 ## Step 26
-Clique sur ``||Variables:Variables||`` drag and drop ``||Variables:stop_time||`` to
+Clique sur ``||Variables:Variables||``. Ensuite, fait glisser et dépose le bloc ``||Variables:stop_time||`` to
 replace left ``||Math:0||``. Drag and drop ``||Variables:start_time||`` to replace
 right ``||Math:0||``.
 ```blocks
@@ -347,7 +347,7 @@ basic.showNumber((stop_time - start_time)/1000)
 })
 ```
 ## Step 27
-Clique sur ``||Input:Entrée||``  and then ``||Input:...more||`` drag and drop ``||Input:running time||`` block to replace
+Clique sur ``||Input:Entrée||``  and then ``||Input:...more||``. Ensuite, fait glisser et dépose le bloc ``||Input:running time||`` block to replace
 ``||0||`` in ``||Variables:start_time||`` and ``||Variables:stop_time||``
 nested in ``||Input:on button A pressed||`` and ``||Input:on button B pressed||``
 respectively.
