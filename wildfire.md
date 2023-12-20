@@ -706,8 +706,46 @@ basic.forever(function () {
     }
 })
 ```
-
 ## Step 34
+Click ``||Variables:Variables||`` drag and drop ``||Variables:set temperatureThreshold to 0||``,
+``||Variables:set lightThreshold to 0||`` and ``||Variables:set soundThreshold to 0||`` blocks inside
+``||Basic:on start||`` block under ``||fwdMotors:setup driving||`` block.
+Recommended threshold values:
+- Temperature = 25
+- Sound = 100
+- Light = 100
+- _Note: Adjust the threshold values according to your surroundings._
+```blocks
+input.onButtonPressed(Button.A, function () {
+    IsDrivingEnabled = true
+})
+input.onButtonPressed(Button.B, function () {
+    IsDrivingEnabled = false
+})
+let IsDrivingEnabled = false
+let lightThreshold = 100
+let temperatureThreshold = 25
+let soundThreshold = 100
+fwdMotors.setupDriving(
+fwdMotors.leftServo,
+fwdMotors.rightServo
+)
+basic.forever(function () {
+    if (IsDrivingEnabled) {
+        for (let index = 0; index < 4; index++) {
+            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
+            basic.pause(5000)
+            fwdMotors.turn(25)
+           if (lightThreshold < input.lightLevel()  || temperatureThreshold < input.temperature() || soundThreshold < input.soundLevel()) {
+            } else {
+            }
+        }
+    } else {
+        fwdMotors.stop()
+    }
+})
+```
+## Step 35
 Click ``||Loops:Loops||`` drag and drop ``||Loops:repeat 4 times||``
 block to nest inside ``||Logic:if true then||`` block.
 ```blocks
@@ -743,7 +781,7 @@ basic.forever(function () {
 })
 ```
 
-## Step 35
+## Step 36
 Click ``||Music:Music||`` drag and drop two ``||Music:play tone Middle C for 1 beat||``
 blocks to nest inside ``||Loops:repeat 4 times||`` block.
 ```blocks
@@ -780,7 +818,7 @@ basic.forever(function () {
     }
 })
 ```
-## Step 36
+## Step 37
 Click ``||Music:Music||`` drag and drop ``||Music:stop all sounds||``
 blocks to nest inside ``||Logic:else||`` condition.
 ```blocks
@@ -820,7 +858,7 @@ basic.forever(function () {
 ```
 
 
-## Step 37
+## Step 38
 Click ``||Basic:Basic||`` drag and drop ``||Basic:pause (ms) 100||`` block under 
 ``||Logic:else||`` condition. Change ``||Basic:100||`` to ``||Basic:1000||``.
 ```blocks
@@ -860,27 +898,27 @@ basic.forever(function () {
 })
 ```
 
-## Step 38 @showhint
+## Step 39 @showhint
 ``|Download|`` and test your code. Click the bulb icon to see how
 the simulator shows the components working.
 ![sonar-servos](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/simulator-17-ev-obstacle.gif)
 
-## Step 39 @showhint
+## Step 40 @showhint
 ``|Download|`` and test your code. Click the bulb icon to see how
 the simulator shows the components working.
 ![servos](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/final-sim-tree.gif)
 
-## Step 40 @showdialog
+## Step 41 @showdialog
 If after ``|Downloading|`` your project does not work please refer to the
 image and make sure your components are assigned correctly.
 ![correct-assignment](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/correct-assignment-tree.png)
 
-## Step 41 @showdialog
+## Step 42 @showdialog
 Need help in assigning the right components to their simulators. Watch the video.
 ![final-download](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/servo-assign.gif)
 
-## Step 42 @showdialog
+## Step 43 @showdialog
 Congratulations on completing your Wildfire Tracking with Autonomous Vehicles Project!
 
-## Step 43 @showdialog
+## Step 44 @showdialog
 After your project is complete go back to the lesson for more challenges and extensions.
