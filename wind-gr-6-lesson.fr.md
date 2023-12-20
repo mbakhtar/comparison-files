@@ -15,7 +15,7 @@ Allume la plaque de la trousse d’action climatique.
 ![breakout board](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/breakout-turn-on.png)
 
 ## Step 4 @showhint
-Clique sur les trois points à côté du bouton ``|Download|`` et puis, clique sur Connecter l’appareil. Ensuite, suis les étapes pour coupler ton micro:bit.
+Clique sur les trois points à côté du bouton ``|Download|`` et puis, clique sur _Connecter l’appareil._ Ensuite, suis les étapes pour coupler ton micro:bit.
 ![pair gif](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/pairmicrobit-280x203.gif)
 
 ## Step 5 @showhint
@@ -32,11 +32,11 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (differen
     })
 ```
 ## Step 8
-Right Clique sur ``||fwdSensors:en dial1 tourné par difference||`` block and duplicate. _Note: New block will be grey._
+Clique droit sur le bloc ``||fwdSensors:en dial1 tourné par difference||`` et duplique-le. _Remarque : Le nouveau bloc sera gris._
 ![greyed out example](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/dial-greyed-out-demo.png)
 
 ## Step 9
-Change the direction arrow of the greyed out ``||fwdSensors:en dial1 tourné par difference||`` block. _Note: Greyed out block will turn green._
+Modifie la flèche de direction du bloc grisé ``||fwdSensors:en dial1 tourné par difference||``. _Remarque : le bloc gris deviendra vert._
 ![dial direction](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/dial-direction-switch.gif)
 ```blocks
 fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (difference) {
@@ -46,7 +46,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 ## Step 10
 Clique sur ``||fwdSensors:Capteurs||``. Ensuite, fait glisser et dépose le bloc
-``||fwdSensors:on touch down||`` dans l’espace de travail.
+``||fwdSensors:en touch down||`` dans l’espace de travail.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     })
@@ -57,9 +57,9 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 ## Step 11
 Clique sur ``||fwdMotors:Moteurs||``. Ensuite, fait glisser et dépose le bloc
-``||fwdMotors:mettre leftServo 50 %||`` inside
-``||fwdSensors:en dial1 tourné par difference||`` block. Change ``||fwdMotors:leftServo||``
-to ``||fwdMotors:middleServo||``.
+``||fwdMotors:mettre leftServo 50 %||`` à l’intérieur du bloc
+``||fwdSensors:en dial1 tourné par difference||``. Après, change ``||fwdMotors:leftServo||``
+au ``||fwdMotors:middleServo||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     })
@@ -70,8 +70,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
     })
 ```
 ## Step 12
-Right Clique sur ``||fwdMotors:mettre middleServo 50 %||`` block and duplicate.
-Drag and drop inside the second ``||fwdSensors:en dial1 tourné par difference||`` block.
+Fais clic droit sur le bloc ``||fwdMotors:mettre middleServo 50 %||`` et duplique-le. Ensuite, fais-le glisser et dépose-le à l’intérieur du bloc deuxième  bloc ``||fwdSensors:en dial1 tourné par difference||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     })
@@ -83,7 +82,9 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 })
 ```
 ## Step 13
-Clique sur ``||fwdSensors:Capteurs||``. Drag ``||fwdSensors:dial1 position absolue||`` oval block close to ``||fwdMotors:mettre middleServo 50 %||`` replace ``||fwdMotors:50 %||`` of ``||fwdMotors:mettre middleServo 50 %||`` block.
+Clique sur ``||fwdSensors:Capteurs||``. Ensuite, fais glisser le bloc avec une forme ovale
+``||fwdSensors:dial1 position absolue||`` près du bloc ``||fwdMotors:mettre middleServo 50 %||``
+ et remplace le ``||fwdMotors:50 %||`` du bloc ``||fwdMotors:mettre middleServo 50 %||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 })
@@ -95,9 +96,11 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 })
 ```
 ## Step 14
-Repeat the last step, Clique sur ``||fwdSensors:Capteurs||``.
-Drag ``||fwdSensors:dial1 position absolue||`` oval block close to the other
-``||fwdMotors:mettre middleServo 50 %||`` replace ``||fwdMotors:50 %||`` of ``||fwdMotors:mettre middleServo 50 %||`` block.
+Répéte l’étape antérieure. Clique sur ``||fwdSensors:Capteurs||``.
+. Ensuite, fais glisser le bloc avec une forme ovale ``||fwdSensors:dial1 position absolue||``
+ près de l’autre bloc
+``||fwdMotors:mettre middleServo 50 %||`` et remplace le ``||fwdMotors:50 %||`` 
+du bloc ``||fwdMotors:mettre middleServo 50 %||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
 })
@@ -109,8 +112,8 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 })
 ```
 ## Step 15
-Clique sur ``||fwdMotors:Moteurs||``. Ensuite, fait glisser et dépose le bloc ``||fwdMotors:mettre leftServo 50 %||`` block
- inside ``||fwdSensors:on touch down||`` block. Change ``||fwdMotors:leftServo||`` to ``||fwdMotors:middleServo||``.
+Clique sur ``||fwdMotors:Moteurs||``. Ensuite, fait glisser et dépose le bloc ``||fwdMotors:mettre leftServo 50 %||`` à l’intérieur du bloc 
+``||fwdSensors:en touch down||`` block. Après, change ``||fwdMotors:leftServo||`` au ``||fwdMotors:middleServo||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     fwdMotors.middleServo.fwdSetSpeed(50)
@@ -123,8 +126,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 })
 ```
 ## Step 16
-Change speed of ``||fwdMotors:mettre middleServo 50 %||`` block inside ``||fwdSensors:on touch down||``
-to ``||0||``.
+Change la vitesse du bloc ``||fwdMotors:mettre middleServo 50 %||`` au ``||0||`` à l’intérieur du bloc ``||fwdSensors:en touch down||``.
 ```blocks
 fwdSensors.touch.fwdOnTouch(jacdac.ButtonEvent.Down, function () {
     fwdMotors.middleServo.fwdSetSpeed(0)
@@ -138,7 +140,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CCW, function (differe
 ```
 
 ## Step 17
-Clique sur on ``||Variables:Variables||`` and make ``||Variables:2||`` ``||Variables:Variables||``.
+Clique sur on ``||Variables:Variables||`` et crée ``||Variables:2||`` ``||Variables:Variables||``.
 - ``||Variables:start_time||``
 - ``||Variables:stop_time||``
 ```blocks
@@ -153,8 +155,8 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (differen
 })
 ```
 ## Step 18
-Clique sur on ``||Variables:Variables||``. Ensuite, fait glisser et dépose le bloc ``||Variables:définir start_time à 0||``
-inside ``||Basic:au démarrage||`` block. Repeat this for ``||Variables:définir stop_time à 0||`` block.
+Clique sur ``||Variables:Variables||``. Ensuite, fais glisser et dépose le bloc ``||Variables:définir start_time à 0||``
+à l’intérieur du bloc ``||Basic:au démarrage||``. Répète cela pour le bloc ``||Variables:définir stop_time à 0||``.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -169,7 +171,8 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (differen
 })
 ```
 ## Step 19
-Clique sur ``||Input:Entrée||``  drag and drop ``||Input:on button A pressed||`` block on the workspace.
+Clique sur ``||Input:Entrée||``. Ensuite, fais glisser et dépose le bloc 
+``||Input:on button A pressed||`` dans l’espace de travail.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -186,8 +189,9 @@ input.onButtonPressed(Button.A, function () {
 })
 ```
 ## Step 20
-Clique sur ``||Input:Entrée||``  drag and drop another ``||Input:on button A pressed||`` block on the workspace.
-_Note: This block will be greyed out._ Change the ``||Input:button A||`` to ``||Input:button B||``.
+Clique sur ``||Input:Entrée||`` . Ensuite, fais glisser et dépose un autre bloc 
+``||Input:on button A pressed||`` dans l’espace de travail.
+_Remarque : Le nouveau bloc deviendra gris._ Après, change le ``||Input:button A||`` au ``||Input:button B||``.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -206,7 +210,7 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 ## Step 21
-Clique sur ``||Variables:Variables||``. Ensuite, fait glisser et dépose le bloc ``||Variables:définir start_time à 0||`` inside
+Clique sur ``||Variables:Variables||``. Ensuite, fais glisser et dépose le bloc ``||Variables:définir start_time à 0||`` à l’intérieur du bloc
 ``||Input:on button A pressed||``.
 ```blocks
 let stop_time = 0
@@ -227,8 +231,8 @@ input.onButtonPressed(Button.B, function () {
 })
 ```
 ## Step 22
-Clique sur ``||Variables:Variables||``. Ensuite, fait glisser et dépose le bloc ``||Variables:définir stop_time à 0||`` inside
-``||Input:on button B pressed||``.
+Clique sur ``||Variables:Variables||``. Ensuite, fais glisser et dépose le bloc ``||Variables:définir stop_time à 0||`` 
+à l’intérieur du bloc ``||Input:on button B pressed||``.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -249,8 +253,8 @@ stop_time = 0
 })
 ```
 ## Step 23
-Clique sur ``||Basic:Basic||``. Ensuite, fait glisser et dépose le bloc ``||Basic:show number||`` block under
-``||Variables:définir stop_time à 0||`` inside ``||Input:on button B pressed||`` block.
+Clique sur ``||Basic:Base||``. Ensuite, fais glisser et dépose le bloc ``||Basic:montrer nombre||`` sous le bloc
+``||Variables:définir stop_time à 0||`` à l’intérieur du bloc ``||Input:on button B pressed||``.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -272,10 +276,10 @@ basic.showNumber(0)
 })
 ```
 ## Step 24
-Clique sur ``||Math:Math||``. Ensuite, fait glisser et dépose le bloc
-``||Math:Division operator||`` block to replace the ``||Basic:0||`` of
-``||Basic:show number||`` block. For ``||Math:Division||`` change the 
-right ``||Math:0||`` to ``||Math:1000||``.
+Clique sur ``||Math:Maths||``. Ensuite, fais glisser et dépose le bloc
+``||Math:Division operator||`` pour remplacer le ``||Basic:0||`` du bloc
+``||Basic:montrer nombre||``. Pour ``||Math:Division||`` change le ``||Math:0||``
+ droit en ``||Math:1000||``.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -297,9 +301,9 @@ basic.showNumber(0/1000)
 })
 ```
 ## Step 25
-Clique sur ``||Math:Math||``. Ensuite, fait glisser et dépose le bloc
-``||Math:Subtraction operator||`` block to replace the left ``||Math:0||`` of
-``||Math:0 / 1000||`` block. 
+Clique sur ``||Math:Maths||``. Ensuite, fais glisser et dépose le bloc
+``||Math:Subtraction operator||`` pour remplacer le ``||Math:0||`` gauche du bloc
+``||Math:0 / 1000||``. 
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -321,9 +325,9 @@ basic.showNumber((0-0)/1000)
 })
 ```
 ## Step 26
-Clique sur ``||Variables:Variables||``. Ensuite, fait glisser et dépose le bloc ``||Variables:stop_time||`` to
-replace left ``||Math:0||``. Drag and drop ``||Variables:start_time||`` to replace
-right ``||Math:0||``.
+Clique sur ``||Variables:Variables||``. Ensuite, fais glisser et dépose le ``||Variables:stop_time||`` 
+pour remplacer le ``||Math:0||`` gauche. Après, fais glisser et dépose ``||Variables:start_time||``
+pour remplacer le ``||Math:0||`` droit.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -347,10 +351,11 @@ basic.showNumber((stop_time - start_time)/1000)
 })
 ```
 ## Step 27
-Clique sur ``||Input:Entrée||``  and then ``||Input:...more||``. Ensuite, fait glisser et dépose le bloc ``||Input:running time||`` block to replace
-``||0||`` in ``||Variables:start_time||`` and ``||Variables:stop_time||``
-nested in ``||Input:on button A pressed||`` and ``||Input:on button B pressed||``
-respectively.
+Clique sur ``||Input:Entrée||`` et ensuite sur ``||Input:...plus||``. Après, Ensuite, 
+fais glisser et dépose le bloc ``||Input:running time||`` pour remplacer le
+``||0||`` dans ``||Variables:start_time||`` et ``||Variables:stop_time||``
+placés en ``||Input:on button A pressed||`` et ``||Input:on button B pressed||``
+respectivement.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -372,12 +377,10 @@ basic.showNumber((stop_time - start_time)/1000)
 })
 ```
 ## Step 28 @showhint
-``|Download|`` and test your code. Clique sur the bulb icon to see how
-the simulator shows the components working.
+Clique sur ``|Download|`` et teste ton code. Clique sur l’icône de l’ampoule pour voir comment le simulateur montre le fonctionnement des composants.
 ![dial-servo](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/simulator-13-wind.gif)
 
 ## Step 29 @showdialog
-Congratulations on completing your How Wind Turbines Capture Kinetic Energy Project!
-
+Félicitations pour la réalisation de ton projet Comment les turbines éoliennes capturent  l’énergie cinétique.
 ## Step 30 @showdialog
-After your project is complete, go back to the lesson for more challenges and extensions.
+Une fois ton projet terminé, reviens à la leçon pour plus de défis et d’extensions.
