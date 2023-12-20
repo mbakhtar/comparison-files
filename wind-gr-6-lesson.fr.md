@@ -172,7 +172,7 @@ fwdSensors.dial1.fwdOnDialTurned(fwdSensors.DialDirection.CW, function (differen
 ```
 ## Step 19
 Clique sur ``||Input:Entrée||``. Ensuite, fais glisser et dépose le bloc 
-``||Input:on button A pressed||`` dans l’espace de travail.
+``||Input:lorsque le bouton A est pressé||`` dans l’espace de travail.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -190,7 +190,7 @@ input.onButtonPressed(Button.A, function () {
 ```
 ## Step 20
 Clique sur ``||Input:Entrée||`` . Ensuite, fais glisser et dépose un autre bloc 
-``||Input:on button A pressed||`` dans l’espace de travail.
+``||Input:lorsque le bouton A est pressé||`` dans l’espace de travail.
 _Remarque : Le nouveau bloc deviendra gris._ Après, change le ``||Input:button A||`` au ``||Input:button B||``.
 ```blocks
 let stop_time = 0
@@ -211,7 +211,7 @@ input.onButtonPressed(Button.B, function () {
 ```
 ## Step 21
 Clique sur ``||Variables:Variables||``. Ensuite, fais glisser et dépose le bloc ``||Variables:définir start_time à 0||`` à l’intérieur du bloc
-``||Input:on button A pressed||``.
+``||Input:lorsque le bouton A est pressé||``.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -232,7 +232,7 @@ input.onButtonPressed(Button.B, function () {
 ```
 ## Step 22
 Clique sur ``||Variables:Variables||``. Ensuite, fais glisser et dépose le bloc ``||Variables:définir stop_time à 0||`` 
-à l’intérieur du bloc ``||Input:on button B pressed||``.
+à l’intérieur du bloc ``||Input:lorsque le bouton B est pressé||``.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -254,7 +254,7 @@ stop_time = 0
 ```
 ## Step 23
 Clique sur ``||Basic:Base||``. Ensuite, fais glisser et dépose le bloc ``||Basic:montrer nombre||`` sous le bloc
-``||Variables:définir stop_time à 0||`` à l’intérieur du bloc ``||Input:on button B pressed||``.
+``||Variables:définir stop_time à 0||`` à l’intérieur du bloc ``||Input:lorsque le bouton B est pressé||``.
 ```blocks
 let stop_time = 0
 let start_time = 0
@@ -352,9 +352,9 @@ basic.showNumber((stop_time - start_time)/1000)
 ```
 ## Step 27
 Clique sur ``||Input:Entrée||`` et ensuite sur ``||Input:...plus||``. Après, Ensuite, 
-fais glisser et dépose le bloc ``||Input:running time||`` pour remplacer le
+fais glisser et dépose le bloc ``||Input:temps d'exécution (ms)||`` pour remplacer le
 ``||0||`` dans ``||Variables:start_time||`` et ``||Variables:stop_time||``
-placés en ``||Input:on button A pressed||`` et ``||Input:on button B pressed||``
+placés en ``||Input:lorsque le bouton A est pressé||`` et ``||Input:lorsque le bouton B est pressé||``
 respectivement.
 ```blocks
 let stop_time = 0
