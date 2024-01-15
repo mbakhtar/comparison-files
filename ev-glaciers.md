@@ -1,4 +1,4 @@
-# Glaciers Tutorial - Work in Progress
+# Glaciers - Work in Progress 
 ```package
 fwd-edu-breakout=github:climate-action-kits/pxt-fwd-edu/fwd-breakout
 sonar=github:climate-action-kits/pxt-fwd-edu
@@ -36,21 +36,19 @@ the simulator and observe the changes.
 Click ``||fwdMotors:Motors||`` drag and drop ``||fwdMotors:setup driving||`` block
 inside ``||Basic:on start||`` block.
 ```blocks
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.leftServo,
-)
+fwdMotors.middleServo.fwdSetAngle(0)
+basic.forever(function () {
+    })
 ```
 
 ## Step 9
 Change the ``||fwdMotors:right motor to rightServo||``.
 Keep the ``||fwdMotors: left motor to leftServo||``.
 ```blocks
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo,
-0
-)
+fwdMotors.middleServo.fwdSetAngle(0)
+basic.forever(function () {
+    fwdMotors.middleServo.fwdSetAngle(90)
+})
 ```
 
 ## Step 10
@@ -65,17 +63,12 @@ Click ``||Input:Input||`` drag and drop ``||Input:on button A pressed||`` block.
 Right click and duplicate it to get another ``||Input:on button A pressed||`` block. 
 Change ``||Input:A||`` to ``||Input:B||`` for the greyed ``||Input:on button A pressed||`` block.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-})
-input.onButtonPressed(Button.B, function () {
-})
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo,
-0
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-})
+    fwdMotors.middleServo.fwdSetAngle(90)
+    })
 ```
 
 ## Step 12
@@ -83,20 +76,13 @@ Click ``||Variables:Variables||`` drag and drop ``||Variables:set IsDrivingEnabl
 inside ``||Input:on button A pressed||`` block and also inside 
 ``||Input:on button B pressed||`` block.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = 0
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = 0
-})
-
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo,
-0
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-})
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    })
 ```
 
 ## Step 13
@@ -104,19 +90,14 @@ Click ``||Logic:Logic||`` drag and drop ``||Logic:true||`` block to replace
 ``||Variables:0||`` of ``||Variables:set IsDrivingEnabled to 0||`` block 
 inside ``||Input:on button A pressed||`` block.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = 0
-})
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo,
-0
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-})
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    })
 ```
 
 ## Step 14
@@ -124,182 +105,128 @@ Click ``||Logic:Logic||`` drag and drop ``||Logic:false||`` block to replace
 ``||Variables:0||`` of ``||Variables:set IsDrivingEnabled to 0||`` block 
 inside ``||Input:on button B pressed||`` block.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo,
-0
-)
-IsDrivingEnabled = false
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-})
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+   })
 ```
 
 ## Step 15
 Click ``||Logic:Logic||`` drag and drop ``||Logic:if true then else||`` block
 inside ``||basic:forever||`` block.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo,
-0
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (true) {
-    }
-    else {
-    }
-})
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    })
 ```
 
 ## Step 16
 Click ``||Loops:Loops||`` drag and drop ``||Loops:repeat 4 times||``
 block to nest inside ``||Logic:if true then||`` block.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (true) {
-        for (let index = 0; index < 4; index++) {
-    }
-    } else {
-    }
-})
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+   })
 ```
 
 ## Step 17
 Click ``||logic:Logic||`` drag and drop ``||logic:if true then else||`` block
 to nest inside ``||Loops:repeat 4 times||`` block.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo,
-0
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (true) {
-    for (let index = 0; index < 4; index++){
-        if (true) {                
-    } 
-    else {
-    } 
-    } }
-    else {
-    }
-})
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    })
 ```
 
 ## Step 18
 Click ``||Variables:Variables||`` drag and drop ``||Variables:IsDrivingEnabled||`` block
 to replace ``||Logic:true||`` condition of ``||Logic:if true then||`` block.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo,
-0
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (IsDrivingEnabled) {
-    for (let index = 0; index < 4; index++){
-        if (true) {                
-    } 
-    else {
-    }
-    }
-    }else {
-    }
-})
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+  })
 ```
 
 ## Step 19
 Click ``||fwdMotors:Motors||`` drag and drop ``||fwdMotors:stop motors||``
 block inside ``||Logic:else condition||``.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo,
-0
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (IsDrivingEnabled) {
-    for (let index = 0; index < 4; index++){
-        if (true) {                
-    } 
-    else {
-    }
-    } 
-    }else {
-    fwdMotors.stop()
-    }
-})
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    if (true) {
+      } else {
+        }
+    })
 ```
 
 ## Step 20
 Click ``||fwdMotors:Motors||`` drag and drop ``||fwdMotors:drive forward at 50||`` block.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (IsDrivingEnabled) {
-        for (let index = 0; index < 4; index++) {
-            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
-           if (true) {
-            } else {
-            }
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    if (0 < 0) {
+        } else {
         }
-    } else {
-        fwdMotors.stop()
-    }
-})
+    })
 ```
 
 ## Step 21
@@ -307,61 +234,45 @@ Click ``||basic:Basic||`` drag and drop ``||basic:pause (ms) 100||``
 block under ``||fwdMotors:drive forward at 50||``.
 Change ``||basic:100||`` to ``||basic:5000||``.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (IsDrivingEnabled) {
-        for (let index = 0; index < 4; index++) {
-            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
-            basic.pause(5000)
-           if (true) {
-            } else {
-            }
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    if (RightDistance < LeftDistance) {
+        } else {
         }
-    } else {
-        fwdMotors.stop()
-    }
-})
+    })
 ```
 
 ## Step 22
 Click ``||fwdMotors:Motors||`` drag and drop ``||fwdMotors:turn 0' in place||`` block
 under ``||basic:pause (ms) 5000||`` block. Change ``||fwdMotors:0||`` to ``||fwdMotors:25||``.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (IsDrivingEnabled) {
-        for (let index = 0; index < 4; index++) {
-            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
-            basic.pause(5000)
-            fwdMotors.turn(25)
-           if (true) {
-            } else {
-            }
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    if (RightDistance < LeftDistance) {
+        basic.showString("Go Left")
+        } else {
         }
-    } else {
-        fwdMotors.stop()
-    }
-})
+    })
 ```
 
 ## Step 23
@@ -369,29 +280,22 @@ Click ``||Logic:Logic||`` drag and drop ``||Logic: or ||``
 block to replace ``||Logic:true||`` condition under 
 of ``||Logic:if true then||`` block under ``||fwdMotors:turn 25' in place||`` block.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (IsDrivingEnabled) {
-        for (let index = 0; index < 4; index++) {
-            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
-            basic.pause(5000)
-            fwdMotors.turn(25)
-           if (0 || 0) {
-            } else {
-            }
-        }
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    if (RightDistance < LeftDistance) {
+        basic.showString("Go Left")
+        basic.clearScreen()
     } else {
-        fwdMotors.stop()
     }
 })
 ```
@@ -399,60 +303,49 @@ basic.forever(function () {
 Click ``||Logic:Logic||`` drag and drop ``||Logic: or ||``
 block to replace left side of ``||Logic: or ||`` block condition.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (IsDrivingEnabled) {
-        for (let index = 0; index < 4; index++) {
-            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
-            basic.pause(5000)
-            fwdMotors.turn(25)
-           if (0 || 0 || 0) {
-            } else {
-            }
-        }
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    if (RightDistance < LeftDistance) {
+        basic.showString("Go Left")
+        basic.clearScreen()
     } else {
-        fwdMotors.stop()
+        basic.showString("Go Right")
     }
-})
+    })
 ```
 
 ## Step 25
 Click ``||Logic:Logic||`` drag and drop ``||Logic: 0 < 0||``
 block to replace left side of ``||Logic: or ||`` block condition.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (IsDrivingEnabled) {
-        for (let index = 0; index < 4; index++) {
-            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
-            basic.pause(5000)
-            fwdMotors.turn(25)
-           if (0 < 0  || 0 || 0) {
-            } else {
-            }
-        }
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    if (RightDistance < LeftDistance) {
+        basic.showString("Go Left")
+        basic.clearScreen()
     } else {
-        fwdMotors.stop()
+        basic.showString("Go Right")
+        basic.clearScreen()
     }
 })
 ```
@@ -461,30 +354,26 @@ basic.forever(function () {
 Click ``||Logic:Logic||`` drag and drop ``||Logic: 0 < 0||``
 block to replace middle ``||Logic: or ||`` block condition.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo
-)
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (IsDrivingEnabled) {
-        for (let index = 0; index < 4; index++) {
-            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
-            basic.pause(5000)
-            fwdMotors.turn(25)
-           if (0 < 0  || 0 < 0 || 0) {
-            } else {
-            }
-        }
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    if (RightDistance < LeftDistance) {
+        basic.showString("Go Left")
+        basic.clearScreen()
     } else {
-        fwdMotors.stop()
+        basic.showString("Go Right")
+        basic.clearScreen()
     }
+    basic.pause(1000)
 })
 ```
 
@@ -794,38 +683,26 @@ basic.forever(function () {
 Click ``||Basic:Basic||`` drag and drop ``||Basic:pause (ms) 100||`` block under 
 ``||Logic:else||`` condition. Change ``||Basic:100||`` to ``||Basic:1000||``.
 ```blocks
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
-})
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo
-)
-let lightThreshold = 100
-let temperatureThreshold = 25
+let LeftDistance = 0
+let RightDistance = 0
+fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
-    if (IsDrivingEnabled) {
-        for (let index = 0; index < 4; index++) {
-            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
-            basic.pause(5000)
-            fwdMotors.turn(25)
-            if (input.lightLevel() > lightThreshold || input.temperature() > temperatureThreshold) {
-                for (let index = 0; index < 4; index++) {
-                    music.playTone(262, music.beat(BeatFraction.Whole))
-                    music.playTone(262, music.beat(BeatFraction.Whole))
-                }
-            } else {
-                music.stopAllSounds()
-            }
-            basic.pause(1000)
-        }
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    if (RightDistance < LeftDistance) {
+        basic.showString("Go Left")
+        basic.clearScreen()
     } else {
-        fwdMotors.stop()
+        basic.showString("Go Right")
+        basic.clearScreen()
     }
+    basic.pause(1000)
 })
 ```
 
