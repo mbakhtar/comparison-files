@@ -5,7 +5,7 @@ sonar=github:climate-action-kits/pxt-fwd-edu
 ```
 ## Step 1 @showdialog
 Welcome to Monitoring Glaciers with Autonomous Vehicles
-![built project](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/project-electric-200.png)
+![built project](https://raw.githubusercontent.com/mbakhtar/pxt-fwd-edu/main/tutorial-assets/glacier-comb-resized.png)
 
 ## Step 2 @showdialog
 In this coding tutorial...
