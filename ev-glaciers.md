@@ -1,15 +1,14 @@
-# Glaciers - Work in Progress 
+# Monitoring Glaciers with Autonomous Vehicles - Work in Progress 
 ```package
 fwd-edu-breakout=github:climate-action-kits/pxt-fwd-edu/fwd-breakout
 sonar=github:climate-action-kits/pxt-fwd-edu
 ```
 ## Step 1 @showdialog
-Welcome to Wildfire Tracking with Autonomous Vehicles
+Welcome to Monitoring Glaciers with Autonomous Vehicles
 ![built project](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/project-electric-200.png)
 
 ## Step 2 @showdialog
-In this coding tutorial the vehicle will be moving around a perimeter and keeping
- a check on Light and Temperature. Press the button A and B to start and stop moving the vehicle.
+In this coding tutorial...
 
 ## Step 3 @showdialog
 Turn on the Climate Action Kit board.
