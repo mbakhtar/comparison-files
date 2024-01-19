@@ -58,46 +58,29 @@ these ``||Variables:Variables||``
 - ``||Variables:LeftDistance||``
 
 ## Step 11
-Click ``||Variables:Variables||`` drag and drop ``||Variables:set LeftDistance to 0||`` inside 
-``||Basic:on start||`` block. Right click and duplicate ``||Variables:set LeftDistance to 0||``.  block
-Change ``||Variables:LeftDistance||`` to ``||Variables:RightDistance||``
-```blocks
-fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
-basic.forever(function () {
-    fwdMotors.middleServo.fwdSetAngle(90)
-    })
-```
-
-## Step 12
 Click ``||Basic:Basic||`` drag and drop ``||Basic:pause (ms) 100||`` block 
 inside ``||Basic:forever||`` block under ``||fwdMotors:set middleServo to 90'||`` block. 
 Change ``||Basic:100||`` to ``||Basic:2000||``.
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
     })
 ```
 
-## Step 13
+## Step 12
 Click ``||Variables:Variables||`` drag and drop ``||Variables:set RightDistance to 0||`` block
 inside ``||Basic:forever||`` block under ``||Basic:pause (ms) 2000||`` block.
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
     RightDistance = 0
     })
 ```
-## Step 14 
+## Step 13
 Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors:sonar1 distance (m)||`` block 
 to replace ``||Variables:0||`` of ``||Variables:set RightDistance to 0||`` block. 
 ```blocks
@@ -108,14 +91,12 @@ basic.forever(function () {
     RightDistance = fwdSensors.sonar1.fwdDistance()
     })
 ```
-## Step 15
+## Step 14
 Click ``||Basic:Basic||`` drag and drop ``||Basic:pause (ms) 100||`` block
 under ``||Variables:set RightDistance to||`` ``||fwdSensors:sonar1 distance (m)||``.
 Change ``||Basic:100||`` to ``||Basic:2000||``.
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
@@ -124,14 +105,12 @@ basic.forever(function () {
    })
 ```
 
-## Step 16
+## Step 15
 Click ``||fwdMotors:Motors||`` drag and drop ``||fwdMotors:set leftServo to 0'||`` block
 under ``||Basic:pause (ms) 2000||`` block. Change ``||fwdMotors:leftServo||`` to ``||fwdMotors:middleServo||`` and
 change ``||fwdMotors:0'||`` to ``||fwdMotors:-90'||``.
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
@@ -141,14 +120,12 @@ basic.forever(function () {
     })
 ```
 
-## Step 17
+## Step 16
 Click ``||Basic:Basic||`` drag and drop ``||Basic:pause (ms) 100||``
 block under ``||fwdMotors:set middleServo to -90'||`` block. Change ``||Basic:100||`` 
 to ``||Basic:2000||``
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
@@ -159,7 +136,7 @@ basic.forever(function () {
    })
 ```
 
-## Step 18
+## Step 17
 Click ``||Variables:Variables||`` drag and drop ``||Variables:set LeftDistance to 0||`` block
 under ``||Basic:pause (ms) 2000||`` block.
 ```blocks
@@ -175,13 +152,11 @@ basic.forever(function () {
     })
 ```
 
-## Step 19
+## Step 18
 Click ``||fwdSensors:Sensors||`` drag and drop ``||fwdSensors:sonar1 distance (m)||`` block
 to replace ``||Variables:0||`` of ``||Variables:set LeftDistance to 0||`` block.
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
@@ -193,7 +168,7 @@ basic.forever(function () {
     })
 ```
 
-## Step 20
+## Step 19
 Click ``||Basic:Basic||`` drag and drop ``||Basic:pause (ms) 100||`` block
 under ``||Variables:set LeftDistance to||`` ``||fwdSensors:sonar1 distance (m)||`` block
 . Change ``||Basic:100||`` to ``||Basic:2000||``.
@@ -211,7 +186,7 @@ basic.forever(function () {
   })
 ```
 
-## Step 21
+## Step 20
 Click ``||Logic:Logic||`` drag and drop ``||Logic:if true then else||``
 block under ``||Basic:pause (ms) 2000||`` block.
 ```blocks
@@ -231,12 +206,10 @@ basic.forever(function () {
     })
 ```
 
-## Step 22
+## Step 21
 Click ``||Logic:Logic||`` drag and drop ``||Logic:0 < 0||`` block to replace ``||Logic:true||`` condition.
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
@@ -252,15 +225,13 @@ basic.forever(function () {
     })
 ```
 
-## Step 23
+## Step 22
 Click ``||Variables:Variables||`` drag and drop ``||Variables:RightDistance||`` block to 
 replace left ``||Logic:0||`` of ``||Logic:Comparison||`` block. Click ``||Variables:Variables||`` again 
 drag and drop ``||Variables:LeftDistance||`` block to 
 replace right ``||Logic:0||`` of ``||Logic:Comparison||`` block.
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
@@ -271,41 +242,37 @@ basic.forever(function () {
     LeftDistance = fwdSensors.sonar1.fwdDistance()
     basic.pause(2000)
     if (RightDistance < LeftDistance) {
+        } else {
+        }
+    })
+```
+
+## Step 23
+Click ``||Basic:Basic||`` drag and drop ``||Basic:show string " "||`` block
+inside ``||Logic:if then||`` condition. Type ``||Basic:Go Left||`` in ``||Basic:show string " "||`` block.
+```blocks
+fwdMotors.middleServo.fwdSetAngle(0)
+basic.forever(function () {
+    fwdMotors.middleServo.fwdSetAngle(90)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(-90)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    if (RightDistance < LeftDistance) {
+        basic.showString("Go Left")
         } else {
         }
     })
 ```
 
 ## Step 24
-Click ``||Basic:Basic||`` drag and drop ``||Basic:show string " "||`` block
-inside ``||Logic:if then||`` condition. Type ``||Basic:Go Left||`` in ``||Basic:show string " "||`` block.
-```blocks
-fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
-basic.forever(function () {
-    fwdMotors.middleServo.fwdSetAngle(90)
-    basic.pause(2000)
-    RightDistance = fwdSensors.sonar1.fwdDistance()
-    basic.pause(2000)
-    fwdMotors.middleServo.fwdSetAngle(-90)
-    basic.pause(2000)
-    LeftDistance = fwdSensors.sonar1.fwdDistance()
-    basic.pause(2000)
-    if (RightDistance < LeftDistance) {
-        basic.showString("Go Left")
-        } else {
-        }
-    })
-```
-
-## Step 25
 Click ``||Basic:Basic||`` drag and drop ``||Basic:clear screen||`` block under 
 ``||Basic:show string "Go Left"||`` block.
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
@@ -323,13 +290,11 @@ basic.forever(function () {
 })
 ```
 
-## Step 26
+## Step 25
 Click ``||Basic:Basic||`` drag and drop ``||Basic:show string " "||`` block
 inside ``||Logic:if then||`` condition. Type ``||Basic:Go Right||`` in ``||Basic:show string " "||`` block.
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
@@ -348,13 +313,11 @@ basic.forever(function () {
     })
 ```
 
-## Step 27
+## Step 26
 Click ``||Basic:Basic||`` drag and drop ``||Basic:clear screen||`` block under 
 ``||Basic:show string "Go Right"||`` block.
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
@@ -374,13 +337,11 @@ basic.forever(function () {
 })
 ```
 
-## Step 28
+## Step 27
 Click ``||Basic:Basic||`` drag and drop ``||Basic:pause (ms) 100||``
 block under ``||Logic:if then else ||`` block. Change ``||Basic:100||`` to ``||Basic:1000||``.
 ```blocks
 fwdMotors.middleServo.fwdSetAngle(0)
-let LeftDistance = 0
-let RightDistance = 0
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
     basic.pause(2000)
@@ -401,12 +362,10 @@ basic.forever(function () {
 })
 ```
 
-## Step 29
+## Step 28
 Click ``||Basic:Basic||`` drag and drop ``||Basic:pause (ms) 100||`` block under 
 ``||Logic:else||`` condition. Change ``||Basic:100||`` to ``||Basic:1000||``.
 ```blocks
-let LeftDistance = 0
-let RightDistance = 0
 fwdMotors.middleServo.fwdSetAngle(0)
 basic.forever(function () {
     fwdMotors.middleServo.fwdSetAngle(90)
@@ -428,27 +387,27 @@ basic.forever(function () {
 })
 ```
 
-## Step 30 @showhint
+## Step 29 @showhint
 ``|Download|`` and test your code. Click the bulb icon to see how
 the simulator shows the components working.
 ![sonar-servos](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/simulator-17-ev-obstacle.gif)
 
-## Step 31 @showhint
+## Step 30 @showhint
 ``|Download|`` and test your code. Click the bulb icon to see how
 the simulator shows the components working.
 ![servos](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/final-sim-tree.gif)
 
-## Step 32 @showdialog
+## Step 31 @showdialog
 If after ``|Downloading|`` your project does not work please refer to the
 image and make sure your components are assigned correctly.
 ![correct-assignment](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/correct-assignment-tree.png)
 
-## Step 33 @showdialog
+## Step 32 @showdialog
 Need help in assigning the right components to their simulators. Watch the video.
 ![final-download](https://climate-action-kits.github.io/pxt-fwd-edu/tutorial-assets/servo-assign.gif)
 
-## Step 34 @showdialog
+## Step 33 @showdialog
 Congratulations on completing your Monitoring Glaciers Project!
 
-## Step 35 @showdialog
+## Step 34 @showdialog
 After your project is complete go back to the lesson for more challenges and extensions.
