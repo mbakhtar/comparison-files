@@ -6,37 +6,30 @@
 ## 
 * This is the complete code for this activity.
 ```template
-input.onButtonPressed(Button.A, function () {
-    IsDrivingEnabled = true
+radio.onReceivedString(function (receivedString) {
+    basic.showString(receivedString)
 })
-input.onButtonPressed(Button.B, function () {
-    IsDrivingEnabled = false
-})
-let IsDrivingEnabled = false
-fwdMotors.setupDriving(
-fwdMotors.leftServo,
-fwdMotors.rightServo
-)
-let lightThreshold = 100
-let temperatureThreshold = 25
+let LeftDistance = 0
+let RightDistance = 0
+radio.setGroup(1)
 basic.forever(function () {
-    if (IsDrivingEnabled) {
-        for (let index = 0; index < 4; index++) {
-            fwdMotors.drive(fwdMotors.DrivingDirection.Forward, 50)
-            basic.pause(5000)
-            fwdMotors.turn(25)
-            if (input.lightLevel() > lightThreshold || input.temperature() > temperatureThreshold) {
-                for (let index = 0; index < 4; index++) {
-                    music.playTone(262, music.beat(BeatFraction.Double))
-                    music.playTone(262, music.beat(BeatFraction.Whole))
-                }
-            } else {
-                music.stopAllSounds()
-            }
-            basic.pause(1000)
-        }
+    fwdMotors.middleServo.fwdSetAngle(180)
+    basic.pause(2000)
+    RightDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    fwdMotors.middleServo.fwdSetAngle(0)
+    basic.pause(2000)
+    LeftDistance = fwdSensors.sonar1.fwdDistance()
+    basic.pause(2000)
+    if (RightDistance < LeftDistance) {
+        basic.showString("Go Left")
+        basic.clearScreen()
+        radio.sendString("Go Left")
     } else {
-        fwdMotors.stop()
+        basic.showString("Go Right")
+        basic.clearScreen()
+        radio.sendString("Go Right")
     }
+    basic.pause(1000)
 })
 ```
